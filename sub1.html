@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{title}</title>
+        <meta name="description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:domain" content="" />
+        <link rel="canonical" href="" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link
+            href="./assets/bootstrap-5.3.3/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="./assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" type="text/css" href="./assets/fontawesome-free-6.5.2-web/css/all.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/sign.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/hyeok.css" />
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/app.js"></script>
+        <script defer src="./assets/js/hyeok.js"></script>
+
+        <!-- jquery-validation -->
+        <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/localization/messages_ko.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body class="sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
+        <div class="wrapper">
+            <!-- navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="push-menu"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">{APP_NAME}</a>
+                    </li>
+                </ul>
+
+                <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            마이페이지
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end m-1">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex justify-content-between align-items-center user-panel">
+                                        <div class="up-image me-1">
+                                            <img src="./assets/images/avatar.png" alt="" class="img-fluid rounded" />
+                                        </div>
+                                        <div class="up-info d-flex flex-column">
+                                            <p class="text-decoration-none text-body m-0">홍길동님</p>
+                                            <p class="text-decoration-none text-body m-0 fs-6">test@test.com</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a href="#" class="brand-link">
+                    <img src="./assets/images/logo.png" alt="" class="brand-image" />
+                </a>
+
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul
+                            class="nav nav-pills nav-sidebar flex-column"
+                            data-widget="treeview"
+                            role="menu"
+                            data-accordion="false"
+                        >
+                            <li class="nav-item">
+                                <a href="./index.html" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <p>Home</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">문서</li>
+                            <li class="nav-item">
+                                <a href="./sub1.html" class="nav-link">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                    <p>문서함</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./sub2.html" class="nav-link">
+                                    <i class="fa-regular fa-file"></i>
+                                    <p>템플릿</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">서명</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-stamp"></i>
+                                    <p>도장</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">설정</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <p class="text">일반</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <p class="text">정보</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                    <p>유료</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <div id="sidebar-overlay"></div>
+            <script src="./assets/js/nav.js"></script>
+            <!-- navbar -->
+
+            <div class="content-wrapper">
+                <div class="container-fluid pt-2 pb-2 mypage-wrap">
+                    <section class="content">
+                        <div class="search_bar">
+                            <div class="word">
+                                <p>검색어</p>
+                                <div class="flex">
+                                    <div class="select_box">
+                                        <select style="border: none" name="" id="">
+                                            <option value="문서 제목">문서 제목</option>
+                                            <option value="서명 요청자">서명 요청자</option>
+                                            <option value="서명자">서명자</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_box">
+                                        <input type="text" placeholder="문서 제목으로 찾기" />
+                                        <button>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="date">
+                                <p>기간</p>
+                                <div class="flex">
+                                    <div class="select_box">
+                                        <select name="" id="">
+                                            <option value="마지막 활동일">마지막 활동일</option>
+                                            <option value="요청일">요청일</option>
+                                            <option value="체결일">체결일</option>
+                                        </select>
+                                    </div>
+                                    <div class="input_box">
+                                        <input type="text" placeholder="YY.MM.DD ~ YY.MM.DD" />
+                                        <button>
+                                            <i class="fa-regular fa-calendar-days"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="label">
+                                <p>라벨</p>
+                                <button>선택 안 함</button>
+                            </div>
+                            <div class="condition">
+                                <p>진행상태</p>
+                                <div class="select_box">
+                                    <select placeholder="">
+                                        <option value="all">모든 상태</option>
+                                        <optgroup label="진행 중">
+                                            <option value="need_signing">내 서명 필요</option>
+                                            <option value="wait_for_signing">상대 서명 대기중</option>
+                                        </optgroup>
+                                        <optgroup label="종결됨">
+                                            <option value="completed">서명 완료됨</option>
+                                            <option value="rejected">서명 거절됨</option>
+                                            <option value="signing_cancelled">서명 취소됨</option>
+                                            <option value="request_cancelled">요청 취소됨</option>
+                                        </optgroup>
+                                        <optgroup label="예약"><option value="scheduled">예약 문서</option></optgroup>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="docu">
+                                <p>그룹별 공유 문서</p>
+                                <button>전체 보기</button>
+                            </div>
+                            <div class="hide">
+                                <p>숨김 문서</p>
+                                <div class="select_box">
+                                    <select placeholder="문서 목록을 선택해 주세요" class="css-1m1u7o9">
+                                        <option disabled="" value="">문서 목록을 선택해 주세요</option>
+                                        <option>제외하고 보기</option>
+                                        <option>숨긴 문서만 보기</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 모바일 검색창 -->
+
+                        <div class="search_bar mb">
+                            <div class="word">
+                                <div class="flex">
+                                    <div class="input_box">
+                                        <input type="text" placeholder="문서 제목으로 찾기" />
+                                        <button>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                    </div>
+                                    <div class="filter">
+                                        <span>필터</span>
+                                        <button><i class="fa-solid fa-filter"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="filter_con">
+                                <div class="word">
+                                    <p>검색어</p>
+                                    <div class="flex">
+                                        <div class="select_box">
+                                            <select style="border: none" name="" id="">
+                                                <option value="문서 제목">문서 제목</option>
+                                                <option value="서명 요청자">서명 요청자</option>
+                                                <option value="서명자">서명자</option>
+                                            </select>
+                                        </div>
+                                        <div class="input_box">
+                                            <input type="text" placeholder="문서 제목으로 찾기" />
+                                            <button>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="date">
+                                    <p>기간</p>
+                                    <div class="flex">
+                                        <div class="select_box">
+                                            <select name="" id="">
+                                                <option value="마지막 활동일">마지막 활동일</option>
+                                                <option value="요청일">요청일</option>
+                                                <option value="체결일">체결일</option>
+                                            </select>
+                                        </div>
+                                        <div class="input_box">
+                                            <input type="text" placeholder="YY.MM.DD ~ YY.MM.DD" />
+                                            <button>
+                                                <i class="fa-regular fa-calendar-days"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="label">
+                                    <p>라벨</p>
+                                    <button>선택 안 함</button>
+                                </div>
+                                <div class="condition">
+                                    <p>진행상태</p>
+                                    <div class="select_box">
+                                        <select placeholder="">
+                                            <option value="all">모든 상태</option>
+                                            <optgroup label="진행 중">
+                                                <option value="need_signing">내 서명 필요</option>
+                                                <option value="wait_for_signing">상대 서명 대기중</option>
+                                            </optgroup>
+                                            <optgroup label="종결됨">
+                                                <option value="completed">서명 완료됨</option>
+                                                <option value="rejected">서명 거절됨</option>
+                                                <option value="signing_cancelled">서명 취소됨</option>
+                                                <option value="request_cancelled">요청 취소됨</option>
+                                            </optgroup>
+                                            <optgroup label="예약">
+                                                <option value="scheduled">예약 문서</option>
+                                            </optgroup>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="docu">
+                                    <p>그룹별 공유 문서</p>
+                                    <button>전체 보기</button>
+                                </div>
+                                <div class="hide">
+                                    <p>숨김 문서</p>
+                                    <div class="select_box">
+                                        <select placeholder="문서 목록을 선택해 주세요" class="css-1m1u7o9">
+                                            <option disabled="" value="">문서 목록을 선택해 주세요</option>
+                                            <option>제외하고 보기</option>
+                                            <option>숨긴 문서만 보기</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="closeFilter">
+                                    <p>필터접기<i class="fa-solid fa-arrow-up"></i></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 리스트 종류 -->
+
+                        <div class="list_tit">
+                            <ul>
+                                <li class="list">
+                                    <input type="checkbox" />
+                                    <span class="deletBtn"
+                                        ><i class="fa-solid fa-trash" style="color: #868686"></i>삭제</span
+                                    >
+                                </li>
+                                <li class="list">상태</li>
+                                <li class="list">문서 제목</li>
+                                <li class="list">라벨</li>
+                                <li class="list">요청일</li>
+                                <li class="list">체결일</li>
+                                <li class="list active_date">
+                                    마지막 활동일
+                                    <ul class="dropdown">
+                                        <li>오름차순 정렬</li>
+                                        <li>내림차순 정렬</li>
+                                    </ul>
+                                </li>
+                                <li class="list">추가메뉴</li>
+                            </ul>
+                        </div>
+                        <!-- content -->
+                        <!-- 문서리스트 -->
+
+                        <div class="info_con">
+                            <ul>
+                                <li>
+                                    <div class="list check_box">
+                                        <input type="checkbox" />
+                                    </div>
+                                    <ul class="flex" style="width: 100%">
+                                        <div class="list sign yellow"><span>내 서명 필요</span></div>
+                                        <div class="list">
+                                            <p class="type"><span>[샘플]</span> 표준 근로계약서</p>
+                                            <p class="worker">최동혁, 최동혁</p>
+                                        </div>
+                                        <div class="list label">
+                                            <i class="fa-solid fa-tags" style="color: #868686"></i>라벨 없음
+                                        </div>
+                                        <div class="list">오후 4:10</div>
+                                        <div class="list">오후 5:10</div>
+                                        <div class="list active_date">오후 5:10</div>
+                                    </ul>
+                                    <ul class="menu">
+                                        <li>
+                                            <div class="list add_menu">
+                                                <div class="dropdown" style="width: auto">
+                                                    <a
+                                                        class="dropdown-toggle"
+                                                        href="#"
+                                                        role="button"
+                                                        data-bs-toggle="dropdown"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <img src="./assets/images/ico_moreBtn.png" alt="" />
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end m-1">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample01</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample02</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample03</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample04</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="list check_box">
+                                        <input type="checkbox" />
+                                    </div>
+                                    <ul class="flex" style="width: 100%">
+                                        <div class="list sign blue"><span>상대 서명 필요</span></div>
+                                        <div class="list">
+                                            <p class="type"><span>[샘플]</span> 표준 근로계약서</p>
+                                            <p class="worker">최동혁, 최동혁</p>
+                                        </div>
+                                        <div class="list label">
+                                            <i class="fa-solid fa-tags" style="color: #868686"></i>라벨 없음
+                                        </div>
+                                        <div class="list">오후 4:10</div>
+                                        <div class="list">오후 5:10</div>
+                                        <div class="list active_date">오후 5:10</div>
+                                    </ul>
+                                    <ul class="menu">
+                                        <li>
+                                            <div class="list add_menu">
+                                                <div class="dropdown" style="width: auto">
+                                                    <a
+                                                        class="dropdown-toggle"
+                                                        href="#"
+                                                        role="button"
+                                                        data-bs-toggle="dropdown"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <img src="./assets/images/ico_moreBtn.png" alt="" />
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end m-1">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample01</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample02</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample03</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample04</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div class="list check_box">
+                                        <input type="checkbox" />
+                                    </div>
+                                    <ul class="flex" style="width: 100%">
+                                        <div class="list sign green"><span>완료</span></div>
+                                        <div class="list">
+                                            <p class="type"><span>[샘플]</span> 표준 근로계약서</p>
+                                            <p class="worker">최동혁, 최동혁</p>
+                                        </div>
+                                        <div class="list label">
+                                            <i class="fa-solid fa-tags" style="color: #868686"></i>라벨 없음
+                                        </div>
+                                        <div class="list">오후 4:10</div>
+                                        <div class="list">오후 5:10</div>
+                                        <div class="list active_date">오후 5:10</div>
+                                    </ul>
+                                    <ul class="menu">
+                                        <li>
+                                            <div class="list add_menu">
+                                                <div class="dropdown" style="width: auto">
+                                                    <a
+                                                        class="dropdown-toggle"
+                                                        href="#"
+                                                        role="button"
+                                                        data-bs-toggle="dropdown"
+                                                        aria-expanded="false"
+                                                    >
+                                                        <img src="./assets/images/ico_moreBtn.png" alt="" />
+                                                    </a>
+                                                    <ul class="dropdown-menu dropdown-menu-end m-1">
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample01</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample02</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample03</a>
+                                                        </li>
+                                                        <li>
+                                                            <a class="dropdown-item" href="#">sample04</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <!-- content -->
+                        </div>
+                        <!-- content -->
+                    </section>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="main-footer"><strong>Copyright &copy; 2024 DeepBrain.</strong> All rights reserved.</footer>
+            <!-- footer -->
+        </div>
+    </body>
+</html>

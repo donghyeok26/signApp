@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{title}</title>
+        <meta name="description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:domain" content="" />
+        <link rel="canonical" href="" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link
+            href="./assets/bootstrap-5.3.3/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        />
+        <script
+            src="./assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" type="text/css" href="./assets/fontawesome-free-6.5.2-web/css/all.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/sign.css" />
+
+        <link rel="stylesheet" href="./assets/css/hyeok.css" />
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+        <!-- jquery-validation -->
+        <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/localization/messages_ko.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body class="sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
+        <div class="wrapper">
+            <!-- navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="push-menu"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">{APP_NAME}</a>
+                    </li>
+                </ul>
+
+                <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            마이페이지
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end m-1">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex justify-content-between align-items-center user-panel">
+                                        <div class="up-image me-1">
+                                            <img src="./assets/images/avatar.png" alt="" class="img-fluid rounded" />
+                                        </div>
+                                        <div class="up-info d-flex flex-column">
+                                            <p class="text-decoration-none text-body m-0">홍길동님</p>
+                                            <p class="text-decoration-none text-body m-0 fs-6">test@test.com</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a href="#" class="brand-link">
+                    <img src="./assets/images/logo.png" alt="" class="brand-image" />
+                </a>
+
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul
+                            class="nav nav-pills nav-sidebar flex-column"
+                            data-widget="treeview"
+                            role="menu"
+                            data-accordion="false"
+                        >
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <p>Home</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">문서</li>
+                            <li class="nav-item">
+                                <a href="./sub1.html" class="nav-link">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                    <p>문서함</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./sub2.html" class="nav-link">
+                                    <i class="fa-regular fa-file"></i>
+                                    <p>템플릿</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">서명</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-stamp"></i>
+                                    <p>도장</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">설정</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <p class="text">일반</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <p class="text">정보</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                    <p>유료</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <div id="sidebar-overlay"></div>
+            <script src="./assets/js/nav.js"></script>
+            <!-- navbar -->
+
+            <div class="content-wrapper">
+                <section class="content myplan">
+                    <!-- content -->
+                    <div class="container-fluid pt-2 pb-2">
+                        <div class="container-fluid pt-2 pb-2 mypage-wrap">
+                            <div class="row mb-2">
+                                <div class="col-12 mb-2">
+                                    <div class="con_layout">
+                                        <ul class="tab">
+                                            <li class="on">
+                                                <a href="./rate_plan.html">요금제</a>
+                                            </li>
+                                            <li>
+                                                <a href="./bill.html">결제 수단 및 내역</a>
+                                            </li>
+                                        </ul>
+
+                                        <!-- 요금제 이용가능기간 -->
+
+                                        <div class="plan_date sec">
+                                            <p class="txt01">적용된 요금제는 2024년 6월 12일까지 이용 가능합니다.</p>
+                                            <div class="link">
+                                                <a href="javascript:void(0)"><span>요금제 구매하기</span></a>
+                                            </div>
+                                        </div>
+
+                                        <!-- 요금제 -->
+
+                                        <div class="plan_name sec">
+                                            <p class="tit01">요금제</p>
+                                            <p class="txt01">Trial</p>
+                                            <p class="txt02">2024년 6월 12일까지 이용 후 현제 요금제가 종료됩니다.</p>
+                                        </div>
+
+                                        <!-- 사용량 -->
+
+                                        <div class="plan_use sec">
+                                            <p class="tit01">사용량</p>
+                                            <div class="date">
+                                                <p class="txt01">
+                                                    이용기간 : 2024년 5월 13일 → 2024년 6월 12일
+                                                    <span>(오후11시 59분 59초까지)</span>
+                                                </p>
+                                            </div>
+                                            <div class="use_progress">
+                                                <div class="info">
+                                                    <div class="able">잔여량</div>
+                                                    <div class="disable">차감량</div>
+                                                </div>
+                                                <div class="progress_bar">
+                                                    <div class="txt_box">
+                                                        <p class="txt01">서명 요청</p>
+                                                    </div>
+                                                    <div class="progress_box">
+                                                        <p class="txt01">잔여 27건 <span>/ 차감 3건</span></p>
+                                                        <div class="bar">
+                                                            <div class="sum"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="caution">
+                                                    <i class="fa-solid fa-circle-exclamation"></i>
+                                                    <p class="txt01">
+                                                        이용 기간 내 소진하지 않은 잔여량은 현재 요금제의 이용 종료
+                                                        시점(2024-06-12 23:59:59)에 소멸됩니다. 정기 결제가 예정되어
+                                                        있을 경우에도 잔여 사용량이 다음 요금제로 이월되지 않습니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content -->
+                </section>
+            </div>
+            <!-- footer -->
+            <footer class="main-footer"><strong>Copyright &copy; 2024 DeepBrain.</strong> All rights reserved.</footer>
+            <!-- footer -->
+        </div>
+    </body>
+</html>
