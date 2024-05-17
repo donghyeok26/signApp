@@ -56,6 +56,7 @@ select {
 
 .dash .current {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -186,6 +187,7 @@ select {
 
 .dash .start_area .box li .txt_box .txt02 {
     font-size: 14px;
+    word-break: keep-all;
 }
 
 .dash .start_area .box li .img_box {
@@ -219,17 +221,16 @@ select {
     gap: 20px;
 }
 
-.dash .others .guide .box .list {
-    width: calc(100% / 3);
+.dash .others .guide .list {
     text-align: center;
 }
 
-.dash .others .guide .box .list img {
+.dash .others .guide .list img {
     width: 100%;
     border-radius: 5px;
 }
 
-.dash .others .guide .box .list p {
+.dash .others .guide .list p {
     margin-top: 5px;
     font-size: 14px;
 }
@@ -256,6 +257,7 @@ a {
 .dash .others .api ul li {
     position: relative;
     width: calc(100% / 3);
+    padding-top: 15px;
     text-align: center;
 }
 
@@ -309,6 +311,7 @@ a {
 }
 
 .dash .duration .calendar input {
+    width: calc(100% - 30px);
     outline: none;
     border: none;
 }
@@ -783,14 +786,14 @@ a {
 }
 
 .myplan .con_layout {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .myplan .tab {
     display: flex;
     justify-content: center;
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 5px;
     border-radius: 10px;
@@ -973,42 +976,38 @@ a {
 
 .myplan .plan_use .use_progress .progress_bar {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
     margin-top: 15px;
 }
 
 .myplan .plan_use .use_progress .progress_bar .txt_box {
 }
 
-.myplan .plan_use .use_progress .progress_bar .txt_box .txt01 {
+.myplan .plan_use .use_progress .progress_bar .txt01 {
+    flex-grow: 3;
     font-size: 16px;
     font-weight: 700;
 }
 
-.myplan .plan_use .use_progress .progress_bar .progress_box {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.myplan .plan_use .use_progress .progress_bar .progress_box .txt01 {
+.myplan .plan_use .use_progress .progress_bar .txt02 {
     font-size: 16px;
     font-weight: 700;
 }
 
-.myplan .plan_use .use_progress .progress_bar .progress_box .txt01 span {
+.myplan .plan_use .use_progress .progress_bar .txt02 span {
     font-size: 14px;
     color: #797979;
 }
 
-.myplan .plan_use .use_progress .progress_bar .progress_box .bar {
+.myplan .plan_use .use_progress .progress_bar .bar {
     position: relative;
     width: 150px;
     height: 3px;
     background-color: var(--gray-color);
 }
 
-.myplan .plan_use .use_progress .progress_bar .progress_box .bar .sum {
+.myplan .plan_use .use_progress .progress_bar .bar .sum {
     width: 120px;
     height: 3px;
     background-color: var(--yellow-color);
@@ -1247,7 +1246,7 @@ a {
 .bill .tab {
     display: flex;
     justify-content: center;
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
     padding: 5px;
     border-radius: 10px;
@@ -1295,7 +1294,7 @@ a {
 }
 
 .bill .con_layout {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -1434,6 +1433,34 @@ a {
 }
 
 @media (max-width: 768px) {
+    /* 대시보드 / 계약 현황 */
+    .dash .current .input_box,
+    .dash .duration .calendar {
+        padding: 5px 16px;
+    }
+
+    .docu_progress ul {
+        flex-wrap: wrap;
+    }
+
+    .docu_progress ul li {
+        width: calc((100% / 2) - 10px);
+    }
+
+    /* 대시보드 / 바로 시작하기 */
+
+    .dash .start_area .box {
+        flex-wrap: wrap;
+    }
+
+    .dash .start_area .box li {
+        width: calc((100% / 2) - 10px);
+    }
+
+    .dash .start_area .box li .img_box {
+        display: none;
+    }
+
     .list_tit {
         display: none;
     }
@@ -1509,7 +1536,169 @@ a {
     }
 }
 
+@media (max-width: 565px) {
+    /* 대시보드 / 계약 현황 */
+    .dash .current .input_box {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .dash .current .input_box input {
+        width: calc(100% - 30px);
+    }
+
+    .docu_progress ul li .txt01,
+    .dash .start_area .box li .txt_box .txt01 {
+        font-size: 0.9rem;
+    }
+
+    .docu_progress ul li .num {
+        font-size: 1.2rem;
+    }
+
+    .dash .start_area .box li .txt_box .txt02,
+    .dash .others .guide .box .list p,
+    .dash .others .api ul li a p {
+        font-size: 0.8rem;
+    }
+
+    /* 마이페이지 / 요금제 */
+
+    .myplan .tit01 {
+        font-size: 0.9rem;
+    }
+
+    .myplan .plan_date .link {
+        padding: 5px 30px 8px 20px;
+    }
+
+    .myplan .plan_date .txt01,
+    .myplan .plan_date .link a {
+        font-size: 0.8rem;
+    }
+
+    .myplan .plan_name .txt01 {
+        font-size: 0.9rem;
+    }
+
+    .myplan .plan_name .txt02 {
+        font-size: 0.8rem;
+    }
+
+    .myplan .plan_use .date .txt01 {
+        font-size: 0.9rem;
+    }
+
+    .myplan .plan_use .use_progress .progress_bar {
+        flex-wrap: wrap;
+    }
+
+    .myplan .plan_use .use_progress .progress_bar .bar {
+        width: 100%;
+    }
+
+    .myplan .plan_use .use_progress .progress_bar .bar .sum {
+        width: 90%;
+    }
+
+    .myplan .plan_use .use_progress .progress_bar .txt02 {
+        font-size: 0.9rem;
+    }
+
+    .myplan .plan_use .use_progress .caution p {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 480px) {
+    /* 대시보드 */
+
+    .dash .card-body {
+        padding: 20px;
+    }
+
+    .dash .current .txt_box b {
+        font-size: 1.2rem;
+    }
+
+    /* 대시보드 / 계약 현황 */
+
+    .dash .current .input_box input::placeholder,
+    .dash .duration .calendar input::placeholder {
+        font-size: 0.8rem;
+    }
+
+    /* 대시보드 / 이용가이드 */
+
+    .dash .others .guide .swiper-pagination {
+        position: relative;
+        z-index: 1;
+    }
+
+    .dash .others .guide .swiper-pagination-bullet-active {
+        width: 40px;
+        background-color: var(--blue-color);
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    .docu_progress ul li,
+    .dash .start_area .box li {
+        width: 100%;
+    }
+
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        display: none;
+    }
+
+    .dash .others .guide .slide_btn {
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+    }
+
+    .dash .others .guide .swiper-button-next {
+        width: 30px;
+        height: 30px;
+        background: url("../images/slide_right.png") no-repeat center / cover;
+    }
+
+    .dash .others .guide .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+        background: url("../images/slide_left.png") no-repeat center / cover;
+    }
+
+    .myplan .sec {
+        padding: 20px;
+    }
+
+    /* 마이페이지 / 결제 수단 및 내역 */
+
+    .bill .sec {
+        padding: 20px;
+    }
+
+    .bill .tit01 {
+        font-size: 1rem;
+    }
+
+    .bill .payment .flex a,
+    .bill .payment_his .flex a {
+        font-size: 0.8rem;
+    }
+
+    .bill .payment .box .txt01 {
+        font-size: 0.8rem;
+    }
+
+    /* 결제모달 */
+
+    .modal .area {
+        width: 95%;
+    }
+
     .search_bar {
         display: none;
     }

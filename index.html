@@ -46,6 +46,8 @@
         <link rel="stylesheet" type="text/css" href="./assets/css/sign.css" />
 
         <link rel="stylesheet" href="./assets/css/hyeok.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
         <script src="./assets/js/jquery.min.js"></script>
         <script src="./assets/js/app.js"></script>
@@ -198,15 +200,15 @@
                                                     <p class="num">{num}건</p>
                                                 </li>
                                                 <li>
-                                                    <p class="txt01">내 서명 필요</p>
+                                                    <p class="txt01">상대 서명 필요</p>
                                                     <p class="num">{num}건</p>
                                                 </li>
                                                 <li>
-                                                    <p class="txt01">내 서명 필요</p>
+                                                    <p class="txt01">완료된 문서</p>
                                                     <p class="num">{num}건</p>
                                                 </li>
                                                 <li>
-                                                    <p class="txt01">내 서명 필요</p>
+                                                    <p class="txt01">예약된 문서</p>
                                                     <p class="num">{num}건</p>
                                                 </li>
                                             </ul>
@@ -269,19 +271,33 @@
                                 <div class="card">
                                     <div class="card-body guide">
                                         <p class="tit01">이용가이드</p>
-                                        <div class="box">
-                                            <div class="list">
-                                                <img src="./assets/images/sample.png" alt="샘플이미지" />
-                                                <p class="txto1">서명 요청·문서 관리 방법</p>
+                                        <!-- Swiper -->
+                                        <div class="swiper mySwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <div class="list">
+                                                        <img src="./assets/images/sample.png" alt="샘플이미지" />
+                                                        <p class="txto1">서명 요청·문서 관리 방법</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="list">
+                                                        <img src="./assets/images/sample.png" alt="샘플이미지" />
+                                                        <p class="txto1">첫 이용자 가이드북</p>
+                                                    </div>
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <div class="list">
+                                                        <img src="./assets/images/sample.png" alt="샘플이미지" />
+                                                        <p class="txto1">템플릿 이용 방법</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="list">
-                                                <img src="./assets/images/sample.png" alt="샘플이미지" />
-                                                <p class="txto1">첫 이용자 가이드북</p>
+                                            <div class="slide_btn">
+                                                <div class="swiper-button-next"></div>
+                                                <div class="swiper-button-prev"></div>
                                             </div>
-                                            <div class="list">
-                                                <img src="./assets/images/sample.png" alt="샘플이미지" />
-                                                <p class="txto1">템플릿 이용 방법</p>
-                                            </div>
+                                            <div class="swiper-pagination"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -337,5 +353,39 @@
             <footer class="main-footer"><strong>Copyright &copy; 2024 DeepBrain.</strong> All rights reserved.</footer>
             <!-- footer -->
         </div>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.mySwiper', {
+                autoplay: {
+                    delay: 3000,
+                },
+                loop: true,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1, //브라우저가 768보다 클 때
+                        spaceBetween: 10,
+                    },
+                    480: {
+                        slidesPerView: 3, //브라우저가 1024보다 클 때
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3, //브라우저가 1024보다 클 때
+                        spaceBetween: 20,
+                    },
+                },
+                cssMode: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+        </script>
     </body>
 </html>
