@@ -137,11 +137,23 @@ select {
     display: block;
     width: 8px;
     height: 8px;
-    background-color: #0a336e;
+    background-color: var(--bs-purple);
     right: -15px;
     top: 50%;
     transform: translateY(-50%);
     border-radius: 50%;
+}
+
+.docu_progress ul li:nth-child(2) .txt01::after {
+    background-color: var(--bs-red);
+}
+
+.docu_progress ul li:nth-child(3) .txt01::after {
+    background-color: var(--bs-blue);
+}
+
+.docu_progress ul li:nth-child(4) .txt01::after {
+    background-color: var(--bs-primary-border-subtle);
 }
 
 .docu_progress ul li .num {
@@ -505,21 +517,20 @@ a {
 }
 
 .list_tit > ul .list:nth-child(1) {
-    flex-basis: 70px;
+    flex-basis: 135px;
 }
 
 .list_tit > ul .list:nth-child(2) {
-    flex-basis: 110px;
+    flex: 1 1 auto;
 }
 
 .list_tit > ul .list:nth-child(3) {
-    flex: 1 1 auto;
+    flex-basis: 160px;
 }
 
 .list_tit > ul .list:nth-child(4),
 .list_tit > ul .list:nth-child(5),
-.list_tit > ul .list:nth-child(6),
-.list_tit > ul .list:nth-child(7) {
+.list_tit > ul .list:nth-child(6) {
     flex-basis: 160px;
 }
 
@@ -580,8 +591,57 @@ a {
     align-items: center;
 }
 
+.info_con ul li.sign_need .sign {
+    background-color: var(--bs-purple);
+    color: #fff;
+}
+
+.info_con ul li.mysign .sign {
+    background-color: var(--bs-orange);
+    color: #fff;
+}
+
+.info_con ul li.sign_wait .sign {
+    background-color: var(--bs-yellow);
+}
+
+.info_con ul li.sign_wait .list.sign span::after {
+    background-color: #191919;
+}
+
+.info_con ul li.completed .sign {
+    background-color: var(--bs-blue);
+    color: #fff;
+}
+
+.info_con ul li.sign_reject .sign {
+    background-color: var(--bs-danger);
+    color: #fff;
+}
+
+.info_con ul li.sign_cancer .sign {
+    background-color: var(--bs-pink);
+    color: #fff;
+}
+
+.info_con ul li.request_cancel .list.sign {
+    background-color: var(--bs-danger-bg-subtle);
+}
+
+.info_con ul li.request_cancel .list.sign span::after {
+    background-color: #191919;
+}
+
+.info_con ul li.reser .list.sign {
+    background-color: var(--bs-primary-border-subtle);
+}
+
+.info_con ul li.reser .list.sign span::after {
+    background-color: #191919;
+}
+
 .info_con ul li .flex .list:nth-child(1) {
-    flex-basis: 110px;
+    flex-basis: 135px;
 }
 
 .info_con ul .list:nth-child(2) {
@@ -606,10 +666,6 @@ a {
     letter-spacing: -0.25px;
 }
 
-.info_con .list.sign.yellow span {
-    background-color: var(--yellow-color);
-}
-
 .info_con .list.sign span::after {
     content: "";
     position: absolute;
@@ -621,14 +677,7 @@ a {
     transform: translateY(-50%);
     border-radius: 50%;
     background-color: #797979;
-}
-
-.info_con .list.sign.blue span {
-    background-color: var(--blue-color);
-}
-
-.info_con .list.sign.green span {
-    background-color: var(--green-color);
+    background-color: #fff;
 }
 
 .info_con .list.sign span {
@@ -817,6 +866,7 @@ a {
 }
 
 .myplan .tab li a {
+    display: block;
     font-size: 14px;
     font-weight: 700;
     color: var(--txt-color);
@@ -1125,11 +1175,11 @@ a {
 }
 
 .modal .area .btn_box ul li.cancel {
-    background-color: #f8f8f8;
+    background-color: var(--bs-secondary-bg-subtle);
 }
 
 .modal .area .btn_box ul li.save {
-    background-color: var(--yellow-color);
+    background-color: var(--bs-focus-ring-color);
 }
 
 .add_card {
@@ -1180,7 +1230,7 @@ a {
     box-sizing: border-box;
     background: url(../images/ico_downBtn.png) no-repeat;
     background-size: 8px;
-    background-position: 80px center;
+    background-position: 90% center;
 }
 
 .add_card .add_con .box .flex .card_num {
@@ -1228,6 +1278,8 @@ a {
     justify-content: space-between;
     align-items: center;
     border: 1px solid var(--gray-color);
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .deposit .deposit_con .box .info input {
@@ -1237,7 +1289,6 @@ a {
 .deposit .deposit_con .box input {
     outline: none;
     border: none;
-    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -1398,6 +1449,7 @@ a {
 .bill .payment_his table,
 .bill .payment_his th,
 .bill .payment_his td {
+    padding: 5px;
     border-collapse: collapse;
 }
 
@@ -1517,7 +1569,14 @@ a {
         align-items: flex-start;
     }
 
-    .info_con ul li .flex .list:nth-child(3),
+    .info_con ul li .flex .list.label {
+        font-size: 14px;
+    }
+
+    .info_con ul li .flex .list:nth-child(3) {
+        flex-basis: auto;
+    }
+
     .info_con ul li .flex .list:nth-child(4),
     .info_con ul li .flex .list:nth-child(5) {
         display: none;
@@ -1549,7 +1608,7 @@ a {
 
     .docu_progress ul li .txt01,
     .dash .start_area .box li .txt_box .txt01 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 
     .docu_progress ul li .num {
@@ -1562,10 +1621,44 @@ a {
         font-size: 0.8rem;
     }
 
+    /* 마이페이지 / 모달창 */
+
+    .modal .area {
+        top: 60px;
+        padding: 20px;
+    }
+
+    /* 마이페이지 / 모달창 / 결제 수단 설정 */
+
+    .method_con .area .box .info .txt01 {
+        word-break: keep-all;
+    }
+
+    /* 마이페이지 / 모달창 / 카드추가 */
+
+    .add_card .add_con .box .tit02 {
+        margin-bottom: 8px;
+        word-break: keep-all;
+    }
+
+    .add_card .add_con .box .flex {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .add_card .add_con .box .flex .select_date,
+    .add_card .add_con .box .flex .card_num {
+        width: 100%;
+    }
+
+    .add_card .add_con .box .flex .select_date .info select {
+        width: 49%;
+    }
+
     /* 마이페이지 / 요금제 */
 
     .myplan .tit01 {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .myplan .plan_date .link {
@@ -1575,18 +1668,24 @@ a {
     .myplan .plan_date .txt01,
     .myplan .plan_date .link a {
         font-size: 0.8rem;
+        word-break: keep-all;
     }
 
     .myplan .plan_name .txt01 {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
     }
 
     .myplan .plan_name .txt02 {
         font-size: 0.8rem;
+        word-break: keep-all;
     }
 
     .myplan .plan_use .date .txt01 {
-        font-size: 0.9rem;
+        font-size: 0.8rem;
+    }
+
+    .myplan .plan_use .date .txt01 span {
+        display: block;
     }
 
     .myplan .plan_use .use_progress .progress_bar {
@@ -1601,12 +1700,51 @@ a {
         width: 90%;
     }
 
-    .myplan .plan_use .use_progress .progress_bar .txt02 {
-        font-size: 0.9rem;
+    .myplan .plan_use .use_progress .progress_bar .txt01 {
+        font-size: 0.8rem;
+    }
+
+    .myplan .plan_use .use_progress .progress_bar .txt02,
+    .myplan .plan_use .use_progress .progress_bar .txt02 span {
+        font-size: 0.8rem;
+    }
+
+    .myplan .plan_use .use_progress .caution {
+        padding: 10px;
     }
 
     .myplan .plan_use .use_progress .caution p {
         font-size: 0.8rem;
+    }
+
+    /* 마이페이지 / 결제 수단 및 내역 */
+
+    .bill .tit02 {
+        font-size: 1rem;
+    }
+
+    .bill .email .flex input {
+        width: 100%;
+    }
+
+    .bill .email .flex button {
+        min-width: 55px;
+    }
+
+    .bill .payment .box .txt01 {
+        word-break: keep-all;
+    }
+
+    .bill .payment_his table thead {
+        display: none;
+    }
+
+    .bill .payment_his table tbody td {
+        font-size: 0.8rem;
+    }
+
+    .bill .payment_his .txt01 {
+        word-break: keep-all;
     }
 }
 
