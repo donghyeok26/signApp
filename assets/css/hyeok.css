@@ -592,35 +592,56 @@ a {
 }
 
 .info_con ul li.sign_need .sign {
+    color: #fff;
+}
+
+.info_con ul li.sign_need .sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-purple);
-    color: #fff;
+    border-radius: 5px;
 }
 
-.info_con ul li.mysign .sign {
+.info_con ul li.mysign .sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-orange);
+    border-radius: 5px;
     color: #fff;
 }
 
-.info_con ul li.sign_wait .sign {
+.info_con ul li.sign_wait .sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-yellow);
+    border-radius: 5px;
 }
 
 .info_con ul li.sign_wait .list.sign span::after {
     background-color: #191919;
 }
 
-.info_con ul li.completed .sign {
+.info_con ul li.completed .sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-blue);
+    border-radius: 5px;
     color: #fff;
 }
 
-.info_con ul li.sign_reject .sign {
+.info_con ul li.sign_reject .sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-danger);
+    border-radius: 5px;
     color: #fff;
 }
 
-.info_con ul li.sign_cancer .sign {
+.info_con ul li.sign_cancer .sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-pink);
+    border-radius: 5px;
     color: #fff;
 }
 
@@ -632,8 +653,11 @@ a {
     background-color: #191919;
 }
 
-.info_con ul li.reser .list.sign {
+.info_con ul li.reser .list.sign span {
+    display: block;
+    width: 100%;
     background-color: var(--bs-primary-border-subtle);
+    border-radius: 5px;
 }
 
 .info_con ul li.reser .list.sign span::after {
@@ -642,6 +666,7 @@ a {
 
 .info_con ul li .flex .list:nth-child(1) {
     flex-basis: 135px;
+    border-radius: 5px;
 }
 
 .info_con ul .list:nth-child(2) {
@@ -654,10 +679,7 @@ a {
 .info_con ul li .flex .list:nth-child(6),
 .info_con ul li .flex .list:nth-child(7) {
     flex-basis: 160px;
-}
-
-.info_con .list.label i {
-    padding-right: 5px;
+    font-size: 14px;
 }
 
 .info_con .list.sign {
@@ -692,15 +714,130 @@ a {
 }
 
 .info_con .list .type {
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-.info_con .list .worker {
+.info_con .list .docu_info {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow-x: hidden;
     font-size: 12px;
+    font-weight: 700;
     color: #797979;
+}
+
+.info_con .list .docu_info p {
+    margin: 0;
+}
+
+.info_con .list .docu_info .time_box {
+    padding: 0 3px;
+    border-radius: 5px;
+    color: var(--txt-color);
+}
+
+.info_con .list .docu_info .time_box .time {
+    display: block;
+    padding: 0 3px;
+    background-color: var(--bs-border-color);
+}
+
+.info_con .list .moreBtn {
+    width: 100%;
+    padding: 10px 0;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.info_con .list .moreBtn a {
+    display: block;
+    font-size: 14px;
+}
+
+.info_con .list .stamp {
+    font-size: 14px;
+    padding: 5px 5px 5px 30px;
+}
+
+.info_con .list.check {
+    position: relative;
+    cursor: pointer;
+}
+
+.info_con .list.check .stamp {
+    position: relative;
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid var(--bs-primary);
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.info_con .list.check .stamp::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 10px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: url("../images/ico_check.png") no-repeat center / cover;
+}
+
+.info_con .list.not_checking {
+    position: relative;
+    cursor: pointer;
+}
+
+.info_con .list.not_checking .stamp {
+    position: relative;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.info_con .list.not_checking .stamp::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 12px;
+    height: 10px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: url("../images/ico_cancel.png") no-repeat center / cover;
+}
+
+.info_con .list.checking {
+    position: relative;
+    cursor: pointer;
+}
+
+.info_con .list.checking .stamp {
+    position: relative;
+    width: 100px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.info_con .list.checking .stamp::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: url("../images/ico_checking.png") no-repeat center / cover;
 }
 
 .info_con .list.add_menu {
@@ -812,10 +949,6 @@ a {
 
 .content.temp .info_con > ul li ul.menu {
     flex-basis: 85px;
-}
-
-.info_con .list.label i {
-    padding-right: 5px;
 }
 
 /* dropdown */
@@ -1688,10 +1821,6 @@ a {
     .info_con ul li .flex {
         flex-direction: column;
         align-items: flex-start;
-    }
-
-    .info_con ul li .flex .list.label {
-        font-size: 14px;
     }
 
     .info_con ul li .flex .list:nth-child(3) {
