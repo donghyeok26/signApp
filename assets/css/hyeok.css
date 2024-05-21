@@ -1292,6 +1292,95 @@ a {
     box-sizing: border-box;
 }
 
+/* 모달창 / 예치금 내역 */
+
+.deposit_his {
+}
+
+.deposit_his.show {
+    display: block;
+}
+
+.deposit_his p {
+    margin: 0;
+}
+
+.deposit_his .flex .closeBtn {
+    cursor: pointer;
+}
+
+.deposit_his .txt01 {
+    font-size: 16px;
+    color: #555;
+}
+
+.deposit_his.modal .area {
+    width: 800px;
+    max-width: 800px;
+    min-height: 400px;
+}
+.deposit_his .deposit_his_con {
+}
+
+.deposit_his .deposit_his_con .refund_request {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    text-align: right;
+    text-decoration: underline;
+}
+
+.deposit_his .deposit_his_con .refund_request::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    border: 1px solid var(--gray-color);
+    border-left: none;
+    border-bottom: none;
+}
+
+.deposit_his .deposit_his_con .refund_request .txt01 {
+    padding-right: 10px;
+}
+
+.deposit_his .deposit_his_con .his_more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.deposit_his .area .flex {
+    justify-content: space-between;
+}
+
+.deposit_his .area table {
+    width: 100%;
+    text-align: center;
+}
+
+.deposit_his .area table .no_data {
+    padding: 50px 0;
+    font-weight: 700;
+}
+
+.deposit_his .area table,
+.deposit_his .area th,
+.deposit_his .area td {
+    padding: 5px;
+    border-collapse: collapse;
+}
+
+.deposit_his .area table thead {
+    border-bottom: 1px solid var(--gray-color);
+}
+
 /* 마이페이지 / 요금제 / 결제 수단 및 내역 */
 
 .bill .tab {
@@ -1340,6 +1429,10 @@ a {
     font-weight: 700;
 }
 
+.bill .tit02 .charge {
+    font-size: 14px;
+}
+
 .bill p {
     margin: 0;
 }
@@ -1365,6 +1458,21 @@ a {
     justify-content: space-between;
 }
 
+.bill .payment .flex .represent {
+    display: none;
+    margin-left: 5px;
+    padding: 3px 5px;
+    background-color: var(--bs-primary-bg-subtle);
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0a336e;
+}
+
+.bill .payment .flex .represent.show {
+    display: block;
+}
+
 .bill .payment .flex a {
     text-decoration: underline;
 }
@@ -1385,6 +1493,7 @@ a {
 
 .bill .payment .box .txt01 {
     font-size: 14px;
+    word-break: keep-all;
 }
 
 .bill .payment .box .history {
@@ -1406,7 +1515,7 @@ a {
     gap: 5px;
 }
 
-.bill .email .flex input {
+.bill .email .flex input.email_input {
     width: 250px;
     padding: 5px 10px;
     box-sizing: border-box;
@@ -1415,10 +1524,15 @@ a {
     outline: none;
 }
 
-.bill .email .flex button {
+.bill .email .flex button.submit_btn {
     outline: none;
     border: 1px solid var(--gray-color);
     border-radius: 5px;
+}
+
+.bill .email .caution {
+    font-size: 14px;
+    color: var(--bs-danger);
 }
 
 .bill .payment_his {
@@ -1481,6 +1595,13 @@ a {
 
     .list_tit ul .list:nth-child(2) {
         min-width: 110px;
+    }
+}
+
+@media (max-width: 830px) {
+    .deposit_his.modal .area {
+        width: 95%;
+        max-width: 95%;
     }
 }
 
@@ -1655,6 +1776,22 @@ a {
         width: 49%;
     }
 
+    /* 마이페이지 / 모달창 / 예치금 내역 */
+
+    .deposit_his .area table thead {
+        display: none;
+    }
+
+    .deposit_his .area table tbody tr td:nth-child(1),
+    .deposit_his .area table tbody tr td:nth-child(3),
+    .deposit_his .area table tbody tr td:nth-child(4) {
+        display: none;
+    }
+
+    .deposit_his .area table tbody {
+        text-align: left;
+    }
+
     /* 마이페이지 / 요금제 */
 
     .myplan .tit01 {
@@ -1731,16 +1868,19 @@ a {
         min-width: 55px;
     }
 
-    .bill .payment .box .txt01 {
-        word-break: keep-all;
-    }
-
     .bill .payment_his table thead {
         display: none;
     }
 
     .bill .payment_his table tbody td {
         font-size: 0.8rem;
+    }
+
+    .bill .payment_his table tbody td {
+        display: none;
+    }
+    .bill .payment_his table tbody td:nth-child(2) {
+        display: block;
     }
 
     .bill .payment_his .txt01 {

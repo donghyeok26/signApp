@@ -85,3 +85,58 @@ if (depositCancel) {
         deposit.classList.remove('show')
     })
 }
+
+// 예치금 내역
+
+const depositHis = document.querySelector('.deposit_his')
+const depositHisBtn = document.querySelector('.payment .history')
+const depositHisClose = document.querySelector('.deposit_his .closeBtn')
+
+if (depositHisBtn) {
+    depositHisBtn.addEventListener('click', () => {
+        depositHis.classList.add('show')
+    })
+}
+
+if (depositHisClose) {
+    depositHisClose.addEventListener('click', () => {
+        depositHis.classList.remove('show')
+    })
+}
+
+// 대표 결제 수단
+
+const account = document.querySelector('.payment .account')
+const represent = document.querySelector('.payment .represent')
+
+if (account) {
+    account.addEventListener('click', () => {
+        alert('대표 결제 수단으로 적용됩니다.')
+        represent.classList.add('show')
+    })
+}
+
+// 알림용 이메일 정규식
+
+const email = document.querySelector('email')
+const emailInput = document.querySelector('.email .email_input')
+const cautionTxt = document.querySelector('.email .caution')
+
+emailInput.addEventListener('keyup', () => {
+    let emailValue = emailInput.value
+    let emailFormat = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/
+
+    if (emailValue == '') {
+        emailInput.style.border = '1px solid var(--bs-danger)'
+        cautionTxt.style.color = 'var(--bs-danger)'
+        cautionTxt.innerText = '이메일을 입력해주세요.'
+    } else if (!emailFormat.test(emailValue)) {
+        emailInput.style.border = '1px solid var(--bs-danger)'
+        cautionTxt.style.color = 'var(--bs-danger)'
+        cautionTxt.innerText = '이메일 형식이 아닙니다.'
+    } else if (emailFormat.test(emailValue)) {
+        emailInput.style.border = '1px solid green'
+        cautionTxt.style.color = 'green'
+        cautionTxt.innerText = '이메일 입력완료.'
+    }
+})
