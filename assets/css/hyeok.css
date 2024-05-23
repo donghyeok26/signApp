@@ -837,7 +837,7 @@ a {
     flex-wrap: wrap;
 }
 
-.content.temp .search_bar button {
+.content.temp .search_bar .label .labelBtn {
     width: 150px;
     text-align: left;
 }
@@ -874,25 +874,12 @@ a {
 }
 
 .content.temp .list_tit ul li.list:nth-child(1) {
-    flex-basis: 70px;
-}
-
-.content.temp .list_tit ul li.list:nth-child(2) {
     flex: 1 1 auto;
 }
 
-.content.temp .list_tit ul li.list:nth-child(3) {
-    flex-basis: 160px !important;
-    flex: initial;
-}
-
-.content.temp .list_tit ul li.list:nth-child(4),
-.content.temp .list_tit ul li.list:nth-child(5) {
-    flex-basis: 160px !important;
-}
-
-.content.temp .list_tit ul li.list:nth-child(6) {
-    flex-basis: 55px;
+.content.temp .list_tit ul li.list:nth-child(2) {
+    flex-basis: 85px;
+    flex: none;
 }
 
 .content.temp .info_con {
@@ -2106,6 +2093,8 @@ a {
         width: 95%;
     }
 
+    /* 문서함 검색창 */
+
     .search_bar {
         display: none;
     }
@@ -2229,7 +2218,20 @@ a {
         display: block;
     }
 
+    .content.temp .search_bar .word .input_box,
+    .content.temp .search_bar .label .labelBtn {
+        width: 100%;
+    }
+
+    .content.temp .search_bar .word {
+        margin: 10px 0;
+    }
+
     .content.temp .search_bar button.wordBtn {
         width: auto;
+    }
+
+    .content.temp .search_bar > div p {
+        margin-bottom: 5px;
     }
 }
