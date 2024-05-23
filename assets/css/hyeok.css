@@ -1793,6 +1793,10 @@ a {
         order: 2;
     }
 
+    .info_con .list .stamp {
+        font-size: 12px;
+    }
+
     .info_con ul li div.list.check_box:nth-child(1) {
         display: none;
     }
@@ -2184,7 +2188,7 @@ a {
 
     .search_bar.mb .filter_con .word .select_box,
     .search_bar.mb .filter_con .date .select_box {
-        width: 35%;
+        width: 100%;
         min-width: 110px;
     }
 
