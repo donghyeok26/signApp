@@ -122,21 +122,23 @@ const email = document.querySelector('email')
 const emailInput = document.querySelector('.email .email_input')
 const cautionTxt = document.querySelector('.email .caution')
 
-emailInput.addEventListener('keyup', () => {
-    let emailValue = emailInput.value
-    let emailFormat = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/
+if (email) {
+    emailInput.addEventListener('keyup', () => {
+        let emailValue = emailInput.value
+        let emailFormat = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/
 
-    if (emailValue == '') {
-        emailInput.style.border = '1px solid var(--bs-danger)'
-        cautionTxt.style.color = 'var(--bs-danger)'
-        cautionTxt.innerText = '이메일을 입력해주세요.'
-    } else if (!emailFormat.test(emailValue)) {
-        emailInput.style.border = '1px solid var(--bs-danger)'
-        cautionTxt.style.color = 'var(--bs-danger)'
-        cautionTxt.innerText = '이메일 형식이 아닙니다.'
-    } else if (emailFormat.test(emailValue)) {
-        emailInput.style.border = '1px solid green'
-        cautionTxt.style.color = 'green'
-        cautionTxt.innerText = '이메일 입력완료.'
-    }
-})
+        if (emailValue == '') {
+            emailInput.style.border = '1px solid var(--bs-danger)'
+            cautionTxt.style.color = 'var(--bs-danger)'
+            cautionTxt.innerText = '이메일을 입력해주세요.'
+        } else if (!emailFormat.test(emailValue)) {
+            emailInput.style.border = '1px solid var(--bs-danger)'
+            cautionTxt.style.color = 'var(--bs-danger)'
+            cautionTxt.innerText = '이메일 형식이 아닙니다.'
+        } else if (emailFormat.test(emailValue)) {
+            emailInput.style.border = '1px solid green'
+            cautionTxt.style.color = 'green'
+            cautionTxt.innerText = '이메일 입력완료.'
+        }
+    })
+}

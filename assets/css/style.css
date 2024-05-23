@@ -342,3 +342,123 @@ body:not(.layout-fixed) .main-sidebar .sidebar {
 .up-image {
     width: 40px;
 }
+
+/* 추가 */
+
+.sidebar-collapse.layout-fixed .main-sidebar {
+    width: 100px;
+    text-align: center;
+}
+
+.nav-sidebar .nav-link p {
+    word-break: keep-all;
+}
+
+.sidebar-collapse.layout-fixed .elevation-4 {
+    box-shadow: none !important;
+}
+
+.sidebar-collapse .content-wrapper,
+.sidebar-collapse .main-footer,
+.sidebar-collapse .main-header {
+    margin-left: 100px;
+}
+
+.sidebar-collapse .main-sidebar,
+.sidebar-collapse .main-sidebar::before {
+    margin-left: 0;
+}
+
+.layout-fixed.sidebar-collapse .brand-link {
+    width: 100%;
+}
+
+.brand-link .brand-image.small {
+    display: none;
+}
+
+.layout-fixed.sidebar-collapse .brand-link {
+    text-align: center;
+}
+
+.layout-fixed.sidebar-collapse .brand-link .brand-image {
+    display: none;
+}
+
+.layout-fixed.sidebar-collapse .brand-link .small {
+    position: relative;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.layout-fixed.sidebar-collapse .nav-sidebar .nav-link p {
+    font-size: 0.9rem;
+}
+
+.layout-fixed.sidebar-collapse .main-sidebar a.nav-link {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+    .layout-fixed .brand-link {
+        width: 200px;
+    }
+
+    .main-sidebar,
+    .main-sidebar::before {
+        width: 200px;
+    }
+
+    .content-wrapper,
+    .main-footer,
+    .main-header {
+        margin-left: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-expand .navbar-nav .nav-link#push-menu {
+        display: none;
+    }
+
+    .navbar-expand .navbar-nav .nav-link#push-menu {
+        display: block;
+    }
+
+    .sidebar-collapse.layout-fixed .main-sidebar {
+        width: 0;
+    }
+
+    .sidebar-collapse .content-wrapper,
+    .sidebar-collapse .main-footer,
+    .sidebar-collapse .main-header {
+        margin-left: 0;
+    }
+
+    .layout-fixed.sidebar-collapse .brand-link .brand-image {
+        display: block;
+    }
+
+    .layout-fixed.sidebar-collapse .brand-link .small {
+        position: relative;
+        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .navbar-nav .nav-item.d-none {
+        display: block !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .layout-fixed.sidebar-collapse li.nav-link {
+        display: block;
+    }
+}
