@@ -1593,6 +1593,47 @@ a {
     word-break: keep-all;
 }
 
+.bill .payment .box > ul {
+}
+
+.bill .payment .box > ul .card_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.bill .payment .box > ul .card_info .info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.bill .payment .box > ul .card_info .info .bold {
+}
+
+.bill .payment .box > ul .card_info .info .txt02 {
+    margin: 0 10px;
+}
+
+.bill .payment .box > ul .card_info .info .use {
+    display: none;
+    background-color: var(--bs-primary-bg-subtle);
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.bill .payment .box > ul .card_info.use_card .info .use {
+    display: block;
+}
+
+.bill .payment .box > ul .card_info.use_card .info .use i {
+    display: inline-block;
+    padding-right: 5px;
+}
+
 .bill .payment .box .history {
     text-decoration: underline;
     cursor: pointer;
@@ -2091,6 +2132,31 @@ a {
 
     .bill .payment .box .txt01 {
         font-size: 0.8rem;
+    }
+
+    .bill .payment .box > ul .card_info {
+        margin-bottom: 15px;
+    }
+
+    .bill .payment .box > ul .card_info .info {
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .bill .payment .box > ul .card_info .info .bold {
+        display: block;
+        width: 100%;
+        order: 2;
+    }
+
+    .bill .payment .box > ul .card_info .info .txt02 {
+        order: 3;
+        margin: 0 10px 0 0;
+    }
+
+    .bill .payment .box > ul .card_info .info .use {
+        order: 1;
+        margin-bottom: 5px;
     }
 
     /* 결제모달 */
