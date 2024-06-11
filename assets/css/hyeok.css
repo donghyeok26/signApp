@@ -1507,6 +1507,7 @@ a {
 }
 
 .bill .tab li a {
+    display: block;
     font-size: 14px;
     font-weight: 700;
     color: var(--txt-color);
@@ -1712,6 +1713,212 @@ a {
 .bill .payment_his table tbody td {
     padding: 5px;
     box-sizing: border-box;
+}
+
+/* 챗봇 */
+
+.chatbot .wrapper .inner {
+    height: calc(100vh - 100px);
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+    overflow-y: scroll;
+}
+.chatbot .wrapper .inner .greeting {
+    margin-bottom: 100px;
+    text-align: center;
+}
+.chatbot .wrapper .inner .greeting .img_box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 40px auto;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+}
+.chatbot .wrapper .inner .greeting .img_box img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+.chatbot .wrapper .inner .greeting .txt_box .txt01 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.6;
+}
+.chatbot .wrapper .inner .greeting .txt_box .txt02 {
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    word-break: keep-all;
+    color: #777;
+}
+.chatbot .wrapper .inner .greeting .select_list {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 50px;
+    text-align: left;
+}
+.chatbot .wrapper .inner .greeting .select_list .txt01 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #191919;
+}
+.chatbot .wrapper .inner .greeting .select_list > div > ul > li {
+    margin-bottom: 5px;
+}
+.chatbot .wrapper .inner .greeting .select_list > div > ul > li a {
+    font-size: 16px;
+    color: #777;
+}
+.chatbot
+    .wrapper
+    .inner
+    .greeting
+    .select_list
+    > div
+    > ul
+    > li
+    .chatbot
+    .wrapper
+    .inner
+    .greeting
+    .select_list::last-child {
+    margin-bottom: 0;
+}
+.chatbot .wrapper .inner .left {
+    display: flex;
+    margin-bottom: 50px;
+    gap: 30px;
+}
+.chatbot .wrapper .inner .left .profile {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.chatbot .wrapper .inner .left .profile img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+.chatbot .wrapper .inner .left .content ul {
+    display: flex;
+    flex-direction: column;
+}
+.chatbot .wrapper .inner .left .content ul li.chat_name {
+    border: none !important;
+    font-size: 14px;
+    font-weight: 500;
+}
+.chatbot .wrapper .inner .left .content ul li {
+    margin-bottom: 10px;
+}
+.chatbot .wrapper .inner .left .content ul li:nth-child(2) span {
+    padding: 7px 20px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    border-radius: 0 10px 10px 10px;
+    background-color: #fff;
+}
+.chatbot .wrapper .inner .left .content ul li span {
+    display: inline-block;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    word-break: break-all;
+}
+.chatbot .wrapper .inner .left .content ul li a {
+    text-decoration: underline;
+    color: red;
+}
+.chatbot .wrapper .inner .left .content .time {
+    font-size: 14px;
+}
+.chatbot .wrapper .inner .right {
+    margin-bottom: 50px;
+}
+.chatbot .wrapper .inner .right .content ul {
+    display: flex;
+    justify-content: end;
+}
+.chatbot .wrapper .inner .right .content ul li {
+    margin-bottom: 10px;
+}
+.chatbot .wrapper .inner .right .content ul li span {
+    display: inline-block;
+    padding: 7px 20px;
+    box-sizing: border-box;
+    border: 1px solid #e7e7e7;
+    border-radius: 10px 0 10px 10px;
+    background-color: #ffdf00;
+}
+.chatbot .wrapper .inner .right .content .time {
+    font-size: 14px;
+    text-align: right;
+}
+.chatbot .wrapper .inner .chat_box {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-top: 1px solid #777;
+    background-color: #fff;
+}
+.chatbot .wrapper .inner .chat_box .border_box.focus {
+    border: 1px solid #ffdf00;
+}
+.chatbot .wrapper .inner .chat_box .border_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 350px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1px solid #777;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.chatbot .wrapper .inner .chat_box .border_box .chat_input {
+    width: calc(100% - 55px);
+    height: 45px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+.chatbot .wrapper .inner .chat_box .border_box .chat_btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.chatbot .wrapper .inner .chat_box .border_box .chat_btn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width: 1500px) {
@@ -2305,5 +2512,43 @@ a {
 
     .content.temp .search_bar > div p {
         margin-bottom: 5px;
+    }
+
+    /* 챗봇 */
+
+    .chatbot .wrapper .inner .left .content ul {
+        max-width: 400px;
+    }
+    .chatbot .wrapper .inner .greeting {
+        margin-bottom: 50px;
+    }
+    .chatbot .wrapper .inner .greeting .img_box {
+        margin: 0 auto 30px;
+    }
+    .chatbot .wrapper .inner .chat_box {
+        padding: 10px;
+    }
+    .chatbot .wrapper .inner .chat_box .border_box {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .chatbot .wrapper .inner .left .content ul {
+        max-width: 250px;
+    }
+}
+@media (max-width: 380px) {
+    .chatbot .wrapper .inner .left {
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+    .chatbot .wrapper .inner .left .content ul {
+        max-width: 290px;
+    }
+    .chatbot .wrapper .inner .greeting .select_list {
+        flex-direction: column;
+        gap: 30px;
     }
 }
