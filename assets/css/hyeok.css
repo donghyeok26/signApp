@@ -1725,6 +1725,9 @@ a {
     background-color: #fff;
     overflow-y: scroll;
 }
+.chatbot .wrapper .inner p {
+    margin: 0;
+}
 .chatbot .wrapper .inner .greeting {
     margin-bottom: 100px;
     text-align: center;
@@ -1889,6 +1892,21 @@ a {
     -ms-flex-pack: justify;
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .chat_btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* ios */
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+
+    /* fire */
+    -moz-align-items: center;
+    -moz-justify-content: space-between;
+
+    /* IE */
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+    width: 100%;
     padding: 0;
     background: none;
     border: none;
