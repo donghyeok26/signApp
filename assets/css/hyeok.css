@@ -1718,7 +1718,8 @@ a {
 /* 챗봇 */
 
 .chatbot .wrapper .inner {
-    height: calc(100vh - 100px);
+    height: calc(100vh - 240px);
+    margin-bottom: 100px;
     padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
@@ -1727,6 +1728,10 @@ a {
 .chatbot .wrapper .inner .greeting {
     margin-bottom: 100px;
     text-align: center;
+}
+
+.chatbot .wrapper .inner .greeting p {
+    margin: 0;
 }
 .chatbot .wrapper .inner .greeting .img_box {
     position: relative;
@@ -1787,13 +1792,16 @@ a {
     .wrapper
     .inner
     .greeting
-    .select_list::last-child {
+    .select_list:last-child {
     margin-bottom: 0;
 }
 .chatbot .wrapper .inner .left {
     display: flex;
     margin-bottom: 50px;
     gap: 30px;
+}
+.chatbot .wrapper .inner div.left:last-child .content {
+    margin-bottom: 350px;
 }
 .chatbot .wrapper .inner .left .profile {
     position: relative;
@@ -1842,9 +1850,65 @@ a {
     font-weight: 300;
     word-break: break-all;
 }
-.chatbot .wrapper .inner .left .content ul li a {
+.chatbot .wrapper .inner .left .content ul li .list_link {
     text-decoration: underline;
     color: red;
+}
+.chatbot .wrapper .inner .left .content ul li span ul {
+    /* display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 700px; */
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list {
+    width: 400px;
+    padding: 7px 20px;
+    border: 1px solid #777;
+    border-radius: 5px;
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list a {
+    display: flex;
+    /* display: -webkit-box; */
+    display: -moz-box;
+    display: -ms-flexbox;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    /* ios */
+    -webkit-box-align: center;
+    -webkit-box-pack: justify;
+
+    /* fire */
+    -moz-align-items: center;
+    -moz-justify-content: space-between;
+
+    /* IE */
+    -ms-flex-align: center;
+    -ms-flex-pack: justify;
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .chat_btn {
+    padding: 0;
+    background: none;
+    border: none;
+    transition: all 0.2s;
+    color: #191919;
+    text-align: left;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+.chatbot .wrapper .inner .left .content ul li span ul li:last-child {
+    margin: 0;
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list:hover {
+    background-color: var(--yellow-color);
+    border: 1px solid #ffd800;
+    transition: all 0.2s;
 }
 .chatbot .wrapper .inner .left .content .time {
     font-size: 14px;
@@ -1867,16 +1931,20 @@ a {
     border-radius: 10px 0 10px 10px;
     background-color: #ffdf00;
 }
+.chatbot .wrapper .inner .right .content ul li span ul {
+}
+
+.chatbot .wrapper .inner .right .content ul li span ul li {
+}
 .chatbot .wrapper .inner .right .content .time {
     font-size: 14px;
     text-align: right;
 }
 .chatbot .wrapper .inner .chat_box {
-    position: fixed;
-    bottom: 0;
+    position: absolute;
+    bottom: -100px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 1200px;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -1887,38 +1955,81 @@ a {
     border: 1px solid #ffdf00;
 }
 .chatbot .wrapper .inner .chat_box .border_box {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    width: 350px;
+    width: 480px;
     margin: 0 auto;
     padding: 10px 20px;
     box-sizing: border-box;
     border: 1px solid #777;
     border-radius: 40px;
-    overflow: hidden;
 }
 .chatbot .wrapper .inner .chat_box .border_box .chat_input {
-    width: calc(100% - 55px);
+    width: calc(100% - 90px);
     height: 45px;
+    padding: 0 10px;
+    box-sizing: border-box;
     outline: none;
     border: none;
+    border-radius: 20px;
     font-size: 16px;
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_btn {
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_btn img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .chatbot .wrapper .inner .chat_box .border_box .chat_btn {
     position: relative;
     width: 40px;
     height: 40px;
+    cursor: pointer;
     background: none;
     border: none;
-    cursor: pointer;
 }
 .chatbot .wrapper .inner .chat_box .border_box .chat_btn img {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_con.show {
+    display: block;
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_con {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 1px solid #191919;
+    border-radius: 20px;
+    background-color: #fff;
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_con ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_con ul li {
+    width: calc(11.1111111111% - 6px);
+    cursor: pointer;
+}
+.chatbot .wrapper .inner .chat_box .border_box .emoji_con ul li img {
+    width: 100%;
 }
 
 @media (max-width: 1500px) {
@@ -1955,6 +2066,12 @@ a {
 @media (max-width: 1000px) {
     .info_con .list .docu_info .time_box {
         display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .chatbot .wrapper .inner .left::last-child {
+        margin-bottom: 350px;
     }
 }
 
@@ -2083,6 +2200,20 @@ a {
     .content.temp .info_con > ul li ul .list:nth-child(4) {
         display: block;
         flex-basis: initial !important;
+    }
+
+    /* 챗봇 */
+
+    .chatbot .wrapper .inner .left .content ul li span {
+        width: 100%;
+    }
+
+    .chatbot .wrapper .inner .left .content ul li span ul .btn_list {
+        width: 100%;
+    }
+
+    .chatbot .wrapper .inner .left .content ul li span ul .btn_list .chat_btn {
+        width: calc(100% - 15px);
     }
 }
 
@@ -2516,6 +2647,11 @@ a {
 
     /* 챗봇 */
 
+    .chatbot .wrapper .inner {
+        height: calc(100vh - 150px);
+        margin-bottom: 50px;
+    }
+
     .chatbot .wrapper .inner .left .content ul {
         max-width: 400px;
     }
@@ -2526,11 +2662,27 @@ a {
         margin: 0 auto 30px;
     }
     .chatbot .wrapper .inner .chat_box {
+        bottom: -50px;
         padding: 10px;
     }
     .chatbot .wrapper .inner .chat_box .border_box {
         width: 100%;
         padding: 0 10px;
+    }
+
+    .chatbot .wrapper .inner .greeting .select_list {
+        margin-top: 25px;
+    }
+
+    .chatbot .wrapper .inner .right .content ul li,
+    .chatbot .wrapper .inner .right .content .time,
+    .chatbot .wrapper .inner .greeting .txt_box .txt02,
+    .chatbot .wrapper .inner .greeting .select_list .txt01,
+    .chatbot .wrapper .inner .greeting .select_list > div > ul > li a,
+    .chatbot .wrapper .inner .left .content ul li span ul .btn_list .chat_btn,
+    .chatbot .wrapper .inner .left .content ul li span,
+    .chatbot .wrapper .inner .left .content .time {
+        font-size: 0.8rem;
     }
 }
 
