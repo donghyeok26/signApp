@@ -339,8 +339,8 @@
                                 </div>
                 
                                 <div class="chat_box">
-                                    <div class="border_box">
-                                        <input class="chat_input" value="" type="text" placeholder="텍스트를 입력해주세요.">
+                                    <div class="border_box disable">
+                                        <input class="chat_input disable" value="" type="text" placeholder="텍스트를 입력해주세요.">
                                         <button class="emoji_btn">
                                             <img src="./assets/images/ico_emoji.png" alt="이모티콘버튼">
                                         </button>
@@ -411,9 +411,10 @@
             <!-- footer -->
         </div>
         <script>
+            const inputDisable = document.querySelector('.border_box')
             const chatbot = document.querySelector('.chatbot')
             const chatInput = document.querySelector('.chat_input')
-            const btn = document.querySelector('.chat_btn');
+            const chatBtn = document.querySelector('.chat_btn');
             const borderBox = document.querySelector('.border_box')
             const chatLink = document.querySelector('.chat_link')
     
@@ -425,6 +426,17 @@
                 borderBox.classList.remove('focus')
             })
 
+            // 챗봇 disable
+
+            function btnActive(){
+                if(inputDisable.classList.contains('disable')){
+                    chatInput.disabled = true;
+                }
+                
+            }
+
+
+            btnActive()
             //챗봇 이모티콘
 
             const emojiCon = $('.emoji_con');

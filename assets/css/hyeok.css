@@ -1868,6 +1868,7 @@ a {
     width: 400px;
     border: 1px solid #777;
     border-radius: 5px;
+    overflow: hidden;
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list a {
     display: flex;
@@ -1932,21 +1933,17 @@ a {
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban {
     padding: 7px 20px;
-    background-color: var(--bs-danger);
+    background-color: #eee;
     cursor: not-allowed;
-}
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban p,
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban i {
-    color: #fff;
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban i {
     display: none;
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban:hover {
-    background-color: var(--bs-danger);
+    background-color: #bbbbbb;
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete {
-    background-color: var(--bs-primary);
+    background-color: var(--bs-primary-border-subtle);
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete p,
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete i {
@@ -1967,7 +1964,6 @@ a {
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list:hover {
     background-color: var(--yellow-color);
-    border: 1px solid #ffd800;
     transition: all 0.2s;
 }
 .chatbot .wrapper .inner .left .content .time {
@@ -2012,7 +2008,11 @@ a {
     background-color: #fff;
 }
 .chatbot .wrapper .inner .chat_box .border_box.focus {
-    border: 1px solid #ffdf00;
+    border: 1px solid #9ec5fe;
+}
+.chatbot .wrapper .inner .chat_box .border_box.disable {
+    border: 1px solid #808080;
+    background-color: #eee;
 }
 .chatbot .wrapper .inner .chat_box .border_box {
     position: relative;
@@ -2035,6 +2035,7 @@ a {
     outline: none;
     border: none;
     border-radius: 20px;
+    background: transparent;
     font-size: 16px;
 }
 .chatbot .wrapper .inner .chat_box .border_box .emoji_btn {
@@ -2053,7 +2054,6 @@ a {
     position: relative;
     width: 40px;
     height: 40px;
-    cursor: pointer;
     background: none;
     border: none;
 }
@@ -2721,6 +2721,11 @@ a {
         bottom: -50px;
         padding: 10px;
     }
+
+    .chatbot .wrapper .inner .chat_box .border_box .chat_input::placeholder {
+        font-size: 0.9rem;
+    }
+
     .chatbot .wrapper .inner .chat_box .border_box {
         width: 100%;
         padding: 0 10px;
