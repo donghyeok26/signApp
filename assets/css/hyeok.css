@@ -1866,7 +1866,6 @@ a {
 }
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list {
     width: 400px;
-    padding: 7px 20px;
     border: 1px solid #777;
     border-radius: 5px;
 }
@@ -1907,7 +1906,7 @@ a {
     -ms-flex-align: center;
     -ms-flex-pack: justify;
     width: 100%;
-    padding: 0;
+    padding: 7px 20px;
     background: none;
     border: none;
     transition: all 0.2s;
@@ -1924,36 +1923,36 @@ a {
     align-items: center;
     gap: 5px;
 }
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.able {
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .able {
+    padding: 7px 20px;
 }
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.able .flex {
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .able .flex {
     align-items: center;
     gap: 5px;
 }
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.ban {
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban {
+    padding: 7px 20px;
     background-color: var(--bs-danger);
-}
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.ban p,
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.ban i {
-    color: #fff;
-}
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.ban i {
-    display: none;
-}
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.ban:hover {
-    background-color: var(--bs-danger);
-}
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.ban .chat_btn {
     cursor: not-allowed;
 }
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.complete {
-    background-color: var(--bs-primary);
-}
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.complete p,
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.complete i {
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban p,
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban i {
     color: #fff;
 }
-.chatbot .wrapper .inner .left .content ul li span ul .btn_list.complete:hover {
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban i {
+    display: none;
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .ban:hover {
+    background-color: var(--bs-danger);
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete {
+    background-color: var(--bs-primary);
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete p,
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete i {
+    color: #fff;
+}
+.chatbot .wrapper .inner .left .content ul li span ul .btn_list .complete:hover {
     background-color: var(--bs-primary);
 }
 .chatbot .wrapper .inner .left .content ul li span ul .status {
@@ -2749,7 +2748,7 @@ a {
     }
 
     .chatbot .wrapper .inner .left .content ul li span ul .btn_list .chat_btn .flex p,
-    .chatbot .wrapper .inner .left .content ul li span ul .btn_list.able .flex p {
+    .chatbot .wrapper .inner .left .content ul li span ul .btn_list .able .flex p {
         display: none;
     }
 }
