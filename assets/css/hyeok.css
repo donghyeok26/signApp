@@ -1956,6 +1956,13 @@ a {
 .chatbot .wrapper .inner .left .content ul li span ul .btn_list.complete:hover {
     background-color: var(--bs-primary);
 }
+.chatbot .wrapper .inner .left .content ul li span ul .status {
+    text-align: right;
+}
+
+.chatbot .wrapper .inner .left .content ul li span ul .status .link {
+    text-decoration: underline;
+}
 .chatbot .wrapper .inner .left .content ul li span ul li:last-child {
     margin: 0;
 }
@@ -2739,6 +2746,11 @@ a {
 @media (max-width: 400px) {
     .chatbot .wrapper .inner .left .content ul {
         max-width: 250px;
+    }
+
+    .chatbot .wrapper .inner .left .content ul li span ul .btn_list .chat_btn .flex p,
+    .chatbot .wrapper .inner .left .content ul li span ul .btn_list.able .flex p {
+        display: none;
     }
 }
 @media (max-width: 380px) {
