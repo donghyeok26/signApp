@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{title}</title>
+        <meta name="description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:domain" content="" />
+        <link rel="canonical" href="" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link href="./assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="./assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/fontawesome-free-6.5.2-web/css/all.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/sign.css" />
+
+        <link rel="stylesheet" href="./assets/css/hyeok.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+        <!-- jquery-validation -->
+        <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/localization/messages_ko.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body class="sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
+        <div class="wrapper">
+            <!-- navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="push-menu"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">{APP_NAME}</a>
+                    </li>
+                </ul>
+
+                <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            마이페이지
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end m-1">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex justify-content-between align-items-center user-panel">
+                                        <div class="up-image me-1">
+                                            <img src="./assets/images/avatar.png" alt="" class="img-fluid rounded" />
+                                        </div>
+                                        <div class="up-info d-flex flex-column">
+                                            <p class="text-decoration-none text-body m-0">홍길동님</p>
+                                            <p class="text-decoration-none text-body m-0 fs-6">test@test.com</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a href="#" class="brand-link">
+                    <img src="./assets/images/logo.png" alt="" class="brand-image" />
+                </a>
+
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul
+                            class="nav nav-pills nav-sidebar flex-column"
+                            data-widget="treeview"
+                            role="menu"
+                            data-accordion="false"
+                        >
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <p>Home</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">문서</li>
+                            <li class="nav-item">
+                                <a href="./sub1.html" class="nav-link">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                    <p>문서함</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./sub2.html" class="nav-link">
+                                    <i class="fa-regular fa-file"></i>
+                                    <p>템플릿</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">서명</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-stamp"></i>
+                                    <p>도장</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">설정</li>
+                            <li class="nav-item">
+                                <a href="./rate_plan.html" class="nav-link">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <p class="text">일반</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <p class="text">정보</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                    <p>유료</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <div id="sidebar-overlay"></div>
+            <script src="./assets/js/nav.js"></script>
+            <!-- navbar -->
+
+            <div class="content-wrapper">
+                <section class="content service">
+                    <!-- content -->
+                    <div class="container-fluid pt-2 pb-2">
+                        
+                        <div class="intro">
+                            <div class="txt_con">
+                                <p class="txt01">
+                                    번거로운 문서작업
+                                    <span class="next_line">간편하고 빠르게 진행해보세요!</span>
+                                </p>
+                                <p class="txt02">
+                                    전자문서작업에 최적화된 서비스를
+                                    <span class="next_line">이용해보세요.</span>
+                                </p>
+                            </div>
+                            <div class="btn01">
+                                <a href="javascript:void(0)">
+                                    무료로 시작하기
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="service_info">
+                            <div class="flex left">
+                                <div class="img_con">
+                                    <img src="./assets/images/img_service_info01.jpg" alt="모바일로 어디서든 서비스를 이용할 수 있습니다.">
+                                </div>
+                                <div class="txt_con">
+                                    <p class="txt01">
+                                        모바일로 언제, 어디서든 서비스를
+                                        <span class="next_line">이용할 수 있습니다.</span>
+                                    </p>
+                                    <p class="txt02">
+                                        중소기업과 소상공인에게 맞춘 솔루션
+                                        <span class="next_line">저렴하고 간편하게 서류작업을 진행해보세요.</span>
+                                    </p>
+                                    <ul>
+                                        <li>#모바일</li>
+                                        <li>#B2C</li>
+                                        <li>#근로계약</li>
+                                        <li>#명세서</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="flex right">
+                                <div class="txt_con">
+                                    <p class="txt01">
+                                        개인 / 법인 도장을 텍스트로
+                                        <span class="next_line">빠르게 제작해보세요.</span>
+                                    </p>
+                                    <p class="txt02">
+                                        간단한 텍스트 입력으로 개인 / 법인 도장을 
+                                        <span class="next_line">간편하게 생성할 수 있습니다.</span>
+                                    </p>
+                                    <ul>
+                                        <li>#법인</li>
+                                        <li>#개인</li>
+                                        <li>#단 3초</li>
+                                        <li>#도장</li>
+                                    </ul>
+                                </div>
+                                <div class="img_con">
+                                    <img src="./assets/images/img_service_info02.jpg" alt="개인 / 법인 도장을 텍스트로 빠르게 제작해보세요.">
+                                </div>
+                            </div>
+                            <div class="flex left">
+                                <div class="img_con">
+                                    <img src="./assets/images/img_service_info03.jpg" alt="많은 양의 문서를 한 눈에 확인할 수 있습니다.">
+                                </div>
+                                <div class="txt_con">
+                                    <p class="txt01">
+                                        한눈에 확인 가능한 문서 보관함으로
+                                        <span class="next_line">다양하고 많은 양의 문서를 관리해보세요.</span>
+                                    </p>
+                                    <p class="txt02">
+                                        수 많은 계약서를 한눈에 확인하고
+                                        <span class="next_line">편하게 문서정리를 할 수 있습니다.</span>
+                                    </p>
+                                    <ul>
+                                        <li>#문서함</li>
+                                        <li>#문서정리</li>
+                                        <li>#문서정리</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="banner">
+                            <div class="txt_con">
+                                <p class="txt01">전자문서관리는 전자문서와 함께 하세요!</p>
+                                <p class="txt02">가입 후 한달 무료체험이 가능합니다.</p>
+                            </div>
+                            <div class="btn02">
+                                <a href="javascript:void(0)">
+                                    무료체험 바로가기
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    
+                    <!-- content -->
+                </section>
+            </div>
+            <!-- footer -->
+            <footer class="main-footer"><strong>Copyright &copy; 2024 DeepBrain.</strong> All rights reserved.</footer>
+            <!-- footer -->
+        </div>
+    </body>
+</html>

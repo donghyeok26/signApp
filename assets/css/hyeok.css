@@ -9,6 +9,12 @@
     --txt-color: #555;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap");
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
 ul,
 li,
 ol {
@@ -33,6 +39,11 @@ select {
     display: flex;
 }
 
+.next_line {
+    display: block;
+    line-height: inherit;
+}
+
 .cnt {
     margin-top: 50px;
 }
@@ -41,10 +52,567 @@ select {
     margin: 0;
 }
 
+.shadow {
+    box-shadow: 0 3px 7px #000;
+    border-radius: 20px;
+}
+
 /* wrapper */
 
 .content-wrapper {
     background: none;
+}
+
+/* layout */
+
+.con_layout {
+    position: relative;
+}
+
+.con_layout .link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.con_layout .link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -23px;
+    width: 24px;
+    height: 23px;
+    background: url("../images/ico_border.png") no-repeat center / cover;
+}
+
+.con_layout .link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -24px;
+    bottom: 0px;
+    width: 24px;
+    height: 23px;
+    background: url("../images/ico_border.png") no-repeat center / cover;
+}
+
+.con_layout .link:hover a span {
+    left: 55%;
+    transition: all 0.4s;
+}
+
+.con_layout .link a {
+    display: block;
+    width: 110px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.con_layout .link a span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.con_layout .link a span i {
+    padding-left: 5px;
+}
+/* 메인페이지 */
+
+.main {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.main .con_layout {
+}
+
+.main .con_layout .disadvantage {
+    background-color: #0a336e;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.main .con_layout .disadvantage .txt_con {
+}
+
+.main .con_layout .disadvantage .txt_con .txt01 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.main .con_layout .disadvantage .img_con {
+    padding-bottom: 50px;
+}
+
+.main .con_layout .disadvantage .img_con img {
+}
+
+/* 바로가기 */
+
+.shortcut {
+    margin-top: 20px;
+}
+
+.shortcut p {
+    margin: 0;
+}
+
+.shortcut .list {
+}
+
+.shortcut .flex {
+    gap: 20px;
+}
+
+.shortcut .left {
+    width: 50%;
+    box-sizing: border-box;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.shortcut .left a {
+    display: block;
+    padding: 35px;
+}
+
+.shortcut .left .img_con {
+}
+
+.shortcut .left .img_con img {
+}
+
+.shortcut .txt_con {
+}
+
+.shortcut .txt_con .txt01 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.shortcut .txt_con .txt02 {
+    font-size: 16px;
+    font-weight: 400;
+}
+.shortcut .right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+}
+.shortcut .right a {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 20px;
+    padding: 20px;
+}
+.shortcut .right .box {
+    display: flex;
+    flex: 1;
+    gap: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+.shortcut .top {
+}
+
+.shortcut .bottom {
+}
+
+/* 메인 / mockup */
+
+.main .mockup {
+    margin-top: 20px;
+}
+
+.main .mockup p {
+    margin: 0;
+}
+
+.main .mockup > div {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+}
+
+.main .mockup > div a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.main .mockup.first > div a {
+    background-color: var(--yellow-color);
+}
+
+.main .mockup > div a .img_con {
+    width: calc((100% / 2) - 50px);
+}
+
+.main .mockup > div a .img_con img {
+    width: 100%;
+}
+
+.main .mockup > div a .txt_con {
+    text-align: right;
+}
+
+.main .mockup > div a .txt_con .txt01 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.main .mockup > div a .txt_con .txt02 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main .mockup.second > div a {
+    align-items: start;
+    height: 350px;
+    background: url("../images/img_main03.jpg") no-repeat center / cover;
+    border-radius: 20px;
+}
+
+.main .mockup.second > div a .txt_con {
+    text-align: left;
+}
+
+/* 서비스 안내 */
+
+.service {
+    max-width: 680px;
+    margin: 0 auto;
+    background: linear-gradient(#f0f4f9 10%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.service p {
+    margin: 0;
+}
+
+.service .intro {
+    position: relative;
+    padding: 100px 0 120px;
+}
+
+.service .intro .txt_con {
+    text-align: center;
+}
+
+.service .intro .txt_con .txt01 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.service .intro .txt_con .txt02 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.service .intro .btn01 {
+    position: relative;
+    display: inline-block;
+    margin-top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.service .intro .btn01 a {
+    padding: 15px 100px;
+    background-color: #014d69;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
+/* 서비스 안내 / 내용 */
+
+.service .service_info {
+}
+
+.service .service_info .flex {
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.service .service_info .flex .img_con {
+}
+
+.service .service_info .flex .img_con img {
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.service .service_info .flex .txt_con {
+}
+
+.service .service_info .flex .txt_con .txt01 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.service .service_info .flex .txt_con .txt02 {
+    margin-bottom: 35px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.service .service_info .flex .txt_con ul {
+    display: flex;
+    gap: 5px;
+}
+
+.service .service_info .flex .txt_con ul li {
+    padding: 4px 14px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #014d69;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.service .service_info .flex.left .txt_con {
+    text-align: right;
+}
+
+.service .service_info .flex.left .txt_con ul {
+    justify-content: end;
+}
+
+/* 서비스 안내 / 배녀 */
+
+.service .banner {
+    padding: 50px 0;
+    border-radius: 20px;
+    background: url("../images/bg_service_banner.png") no-repeat center / cover;
+}
+
+.service .banner .txt_con {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.service .banner .txt_con .txt01 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.service .banner .txt_con .txt02 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.service .banner .btn02 {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.service .banner .btn02 a {
+    display: block;
+    padding: 15px 50px;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    color: #014d69;
+}
+
+/* 근로계약서 작성이유 */
+
+.contract {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.contract p {
+    margin: 0;
+}
+
+.contract .banner {
+    position: relative;
+    padding: 90px 0;
+    box-sizing: border-box;
+    background-color: #014d69;
+}
+
+.contract .banner::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 199px;
+    height: 99px;
+    bottom: 0;
+    right: 0;
+    background: url("../images/img_contract_banner.png") no-repeat;
+    opacity: 0.6;
+}
+
+.contract .banner .txt_con {
+    text-align: center;
+    color: #fff;
+}
+
+.contract .banner .txt_con .txt01 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.contract .banner .txt_con .txt02 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* 근로계약서 작성이유 / 안쓰는 이유 */
+
+.contract {
+}
+
+.contract .sub_tit01 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.contract .reason {
+    margin: 65px 0;
+    text-align: center;
+}
+
+.contract .reason .txt01 {
+}
+
+.contract .reason .img_con {
+}
+
+.contract .reason .img_con img {
+    width: 100%;
+}
+
+/* 근로계약서 작성이유 / 불이익*/
+
+.contract .disadvantage {
+    position: relative;
+    background-color: #014d69;
+    padding: 65px 20px;
+    box-sizing: border-box;
+}
+
+.contract .disadvantage::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 375px;
+    height: 347px;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: url("../images/img_contract_disadvantage.png") no-repeat;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.contract .disadvantage .sub_tit01 {
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.contract .disadvantage .contract .disadvantage .flex {
+}
+
+.contract .disadvantage .flex ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    z-index: 2;
+}
+
+.contract .disadvantage .flex ul li {
+    flex: 1;
+    width: 50%;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.contract .disadvantage .flex ul li .txt01 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contract .disadvantage .flex ul li .txt02 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+/* 근로계약서 작성이유 / */
+
+.contract .advantage {
+    position: relative;
+    margin: 65px 0;
+    padding-bottom: 65px;
+}
+
+.contract .advantage::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 292px;
+    height: 216px;
+    bottom: 0;
+    right: 0;
+    background: url("../images/img_contract_advantage.png") no-repeat;
+    opacity: 0.24;
+}
+
+.contract .advantage .sub_tit01 {
+    margin-bottom: 30px;
+}
+
+.contract .advantage ul {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.contract .advantage ul li {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /* 대쉬보드  / 계약 현황*/
@@ -2143,6 +2711,54 @@ a {
 }
 
 @media (max-width: 768px) {
+    /* 서비스 안내 */
+
+    .service .intro {
+        padding: 60px 0 120px;
+    }
+
+    .service .intro .txt_con .txt01 {
+        font-size: 2rem;
+        word-break: keep-all;
+    }
+
+    .service .service_info .flex .img_con img {
+        width: 100%;
+        border-radius: 30px;
+    }
+
+    .service .service_info .flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .service .service_info .flex.left .txt_con {
+        text-align: center;
+    }
+
+    .service .service_info .flex .txt_con .txt02 {
+        margin-bottom: 15px;
+    }
+
+    .service .service_info .flex.left .txt_con ul {
+        justify-content: center;
+    }
+
+    .service .service_info .flex.right {
+        flex-direction: column-reverse;
+    }
+
+    .service .service_info .flex.right .txt_con ul {
+        justify-content: center;
+    }
+
+    /* 근로계약서 작성이유 / 불이익 */
+
+    .contract .disadvantage .flex ul li {
+        width: 100%;
+    }
+
     /* 대시보드 / 계약 현황 */
     .dash .current .input_box,
     .dash .duration .calendar {
@@ -2274,6 +2890,12 @@ a {
 }
 
 @media (max-width: 565px) {
+    /* 메인 / 근로계약서 작성이유 */
+
+    .main .con_layout .disadvantage .txt_con .txt01 {
+        word-break: keep-all;
+    }
+
     /* 대시보드 / 계약 현황 */
     .dash .current .input_box {
         width: 100%;
@@ -2446,6 +3068,173 @@ a {
 }
 
 @media (max-width: 480px) {
+    /* 메인 / 슬라이드 */
+
+    .main .main_banner .page_num {
+        width: 70px;
+        height: 25px;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .main .main_banner .page_num .swiper-pagination-fraction {
+        font-size: 0.8rem;
+        line-height: 10px;
+    }
+
+    /* 메인 / 근로계약서 작성 이유 */
+
+    .main .con_layout .disadvantage .img_con img {
+        width: 100%;
+    }
+
+    /* 메인 / 바로가기 */
+
+    .shortcut .txt_con .txt01 {
+        font-size: 1.2rem;
+    }
+
+    .shortcut .txt_con .txt02 {
+        margin-top: 10px;
+        font-size: 0.8rem;
+        line-height: 1.2;
+    }
+
+    .shortcut .txt_con .txt02 .next_line {
+        display: inline;
+    }
+
+    .shortcut .left a {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        padding: 20px;
+    }
+
+    .shortcut .left .img_con img {
+        width: 100%;
+    }
+
+    .shortcut .right a {
+        flex-direction: column;
+        gap: 0;
+        width: 199%;
+    }
+
+    .shortcut .right a .img_con {
+        width: 30%;
+    }
+
+    .shortcut .right a .img_con img {
+        width: 100%;
+    }
+
+    /* 메인 / 목업 */
+
+    .main .mockup > div a {
+        flex-direction: column;
+    }
+
+    .main .mockup > div a .txt_con {
+        margin-top: 20px;
+        text-align: left;
+        word-break: keep-all;
+    }
+
+    .main .mockup > div a .txt_con .txt02 .next_line {
+        display: inline;
+    }
+
+    .main .mockup > div a .img_con {
+        width: 100%;
+    }
+
+    .main .mockup.second > div a {
+        position: relative;
+        height: 275px;
+    }
+
+    .main .mockup.second > div a::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        border-radius: 20px;
+    }
+
+    .main .mockup.second > div a .txt_con {
+        position: relative;
+        color: #fff;
+        z-index: 10;
+    }
+
+    /* 서비스 안내 */
+
+    .service .service_info .flex .txt_con .txt01 {
+        word-break: keep-all;
+    }
+
+    /* 서비스 안내 / 배너 */
+
+    .service .banner .txt_con .txt01 {
+        font-size: 1.2rem;
+        word-break: keep-all;
+    }
+
+    .service .banner .txt_con .txt02 {
+        font-size: 1rem;
+        word-break: keep-all;
+    }
+
+    /* 근로계약서 작성이유 */
+
+    .contract .sub_tit01 {
+        font-size: 1.2rem;
+    }
+
+    .contract .banner {
+        padding: 45px 0;
+    }
+
+    .contract .banner .txt_con {
+        position: relative;
+        z-index: 2;
+    }
+
+    .contract .banner .txt_con .txt01 {
+        font-size: 1.2rem;
+    }
+
+    .contract .banner .txt_con .txt02 {
+        font-size: 1rem;
+    }
+
+    .contract .disadvantage {
+        overflow: hidden;
+    }
+
+    .contract .disadvantage .sub_tit01 {
+        margin-bottom: 30px;
+    }
+
+    .contract .disadvantage .flex ul li .txt02 {
+        font-size: 0.9rem;
+    }
+
+    .contract .advantage ul {
+        flex-wrap: wrap;
+    }
+
+    .contract .advantage ul li {
+        width: calc((100% / 2) - 20px);
+        text-align: center;
+    }
+
     /* 대시보드 */
 
     .dash .card-body {
@@ -2758,6 +3547,14 @@ a {
     }
 }
 @media (max-width: 380px) {
+    /* 서비스 안내 */
+
+    .service .service_info .flex .txt_con ul li {
+        font-size: 0.8rem;
+    }
+
+    /* 챗봇 */
+
     .chatbot .wrapper .inner .left {
         gap: 10px;
         margin-bottom: 20px;
@@ -2768,5 +3565,15 @@ a {
     .chatbot .wrapper .inner .greeting .select_list {
         flex-direction: column;
         gap: 30px;
+    }
+}
+
+@media (max-width: 330px) {
+    .service .intro .btn01 a {
+        padding: 15px 70px;
+    }
+
+    .service .service_info .flex .txt_con ul li {
+        font-size: 0.7rem;
     }
 }
