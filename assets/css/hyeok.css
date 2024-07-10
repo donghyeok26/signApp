@@ -522,7 +522,7 @@ select {
 
 .contract .disadvantage {
     position: relative;
-    background-color: #014d69;
+    background-color: #f0f4f9;
     padding: 65px 20px;
     box-sizing: border-box;
 }
@@ -543,7 +543,6 @@ select {
 
 .contract .disadvantage .sub_tit01 {
     margin-bottom: 60px;
-    color: #fff;
 }
 
 .contract .disadvantage .contract .disadvantage .flex {
@@ -584,8 +583,9 @@ select {
 
 .contract .advantage {
     position: relative;
-    margin: 65px 0;
-    padding-bottom: 65px;
+    padding: 65px 0;
+    background-color: #014d69;
+    color: #fff;
 }
 
 .contract .advantage::after {
@@ -594,8 +594,8 @@ select {
     display: block;
     width: 292px;
     height: 216px;
-    bottom: 0;
-    right: 0;
+    bottom: 30px;
+    right: 30px;
     background: url("../images/img_contract_advantage.png") no-repeat;
     opacity: 0.24;
 }
@@ -613,6 +613,10 @@ select {
 .contract .advantage ul li {
     font-size: 18px;
     font-weight: 500;
+}
+
+.contract .advantage ul li i {
+    padding-right: 5px;
 }
 
 /* 대쉬보드  / 계약 현황*/
