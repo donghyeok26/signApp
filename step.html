@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>{title}</title>
+        <meta name="description" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:domain" content="" />
+        <link rel="canonical" href="" />
+
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="./assets/favicon/apple-icon-57x57.png" />
+        <link rel="apple-touch-icon" sizes="60x60" href="./assets/favicon/apple-icon-60x60.png" />
+        <link rel="apple-touch-icon" sizes="72x72" href="./assets/favicon/apple-icon-72x72.png" />
+        <link rel="apple-touch-icon" sizes="76x76" href="./assets/favicon/apple-icon-76x76.png" />
+        <link rel="apple-touch-icon" sizes="114x114" href="./assets/favicon/apple-icon-114x114.png" />
+        <link rel="apple-touch-icon" sizes="120x120" href="./assets/favicon/apple-icon-120x120.png" />
+        <link rel="apple-touch-icon" sizes="144x144" href="./assets/favicon/apple-icon-144x144.png" />
+        <link rel="apple-touch-icon" sizes="152x152" href="./assets/favicon/apple-icon-152x152.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-icon-180x180.png" />
+        <link rel="icon" type="image/png" sizes="192x192" href="./assets/favicon/android-icon-192x192.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="96x96" href="./assets/favicon/favicon-96x96.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png" />
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="./assets/favicon/ms-icon-144x144.png" />
+        <meta name="theme-color" content="#ffffff" />
+
+        <link href="./assets/bootstrap-5.3.3/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+        <script src="./assets/bootstrap-5.3.3/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="./assets/fontawesome-free-6.5.2-web/css/all.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+        <link rel="stylesheet" type="text/css" href="./assets/css/sign.css" />
+
+        <link rel="stylesheet" href="./assets/css/hyeok.css" />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/app.js"></script>
+
+        <!-- jquery-validation -->
+        <script src="./assets/plugins/jquery-validation/jquery.validate.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/additional-methods.min.js"></script>
+        <script src="./assets/plugins/jquery-validation/localization/messages_ko.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body class="sidebar-mini layout-fixed sidebar-closed sidebar-collapse">
+        <div class="wrapper">
+            <!-- navbar -->
+            <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+                <!-- Left navbar links -->
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="push-menu"><i class="fas fa-bars"></i></a>
+                    </li>
+                    <li class="nav-item d-none d-sm-inline-block">
+                        <a href="#" class="nav-link">{APP_NAME}</a>
+                    </li>
+                </ul>
+
+                <!-- Right navbar links -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            마이페이지
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end m-1">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <div class="d-flex justify-content-between align-items-center user-panel">
+                                        <div class="up-image me-1">
+                                            <img src="./assets/images/avatar.png" alt="" class="img-fluid rounded" />
+                                        </div>
+                                        <div class="up-info d-flex flex-column">
+                                            <p class="text-decoration-none text-body m-0">홍길동님</p>
+                                            <p class="text-decoration-none text-body m-0 fs-6">test@test.com</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item text-center" href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <aside class="main-sidebar sidebar-dark-primary elevation-4">
+                <a href="#" class="brand-link">
+                    <img src="./assets/images/logo.png" alt="" class="brand-image" />
+                </a>
+
+                <div class="sidebar">
+                    <nav class="mt-2">
+                        <ul
+                            class="nav nav-pills nav-sidebar flex-column"
+                            data-widget="treeview"
+                            role="menu"
+                            data-accordion="false"
+                        >
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-house"></i>
+                                    <p>Home</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">문서</li>
+                            <li class="nav-item">
+                                <a href="./sub1.html" class="nav-link">
+                                    <i class="fa-regular fa-folder-open"></i>
+                                    <p>문서함</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./sub2.html" class="nav-link">
+                                    <i class="fa-regular fa-file"></i>
+                                    <p>템플릿</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">서명</li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-stamp"></i>
+                                    <p>도장</p>
+                                </a>
+                            </li>
+                            <li class="nav-header">설정</li>
+                            <li class="nav-item">
+                                <a href="./rate_plan.html" class="nav-link">
+                                    <i class="fa-solid fa-gear"></i>
+                                    <p class="text">일반</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <p class="text">정보</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa-regular fa-credit-card"></i>
+                                    <p>유료</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </aside>
+            <div id="sidebar-overlay"></div>
+            <script src="./assets/js/nav.js"></script>
+            <!-- navbar -->
+
+            <div class="content-wrapper">
+                <section class="content guide_step">
+                    <!-- content -->
+                    <div class="container-fluid pt-2 pb-2">
+
+                        <div class="tabs">
+                            <div class="tablink" data-tab="tab1">이용가이드</div>
+                            <div class="tablink" data-tab="tab2">서명가이드</div>
+                        </div>
+                        
+                        <div id="tab1" class="tabcontent sign_guide">
+                            <div class="banner"> </div>
+                            <div class="tit_con">
+                                <p class="txt01">이용가이드</p>
+                                <p class="txt02">사용할 수 있는 편의기능을 확인해보세요.</p>
+                            </div>
+                            
+                            <div class="process">
+                                <ul class="list_box">
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01">직원관리</p>
+                                            <p class="txt02">등록한 정보를 이용해서 근로계약서를 작성합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_use_step01.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>이름을 입력해서 검색할 수 있습니다.</li>
+                                                <li>직원을 추가할 수 있습니다.</li>
+                                                <li>직원정보, 근무정보, 급여정보를 확인, 수정, 삭제 가능합니다.</li>
+                                                <li>문서종류를 선택할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01">급여관리</p>
+                                            <p class="txt02">직원등록에 등록된 급여정보로 명세서를 작성합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_use_step02.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>정보를 확인할 수 있습니다.(정보, 급여, 급여계산방법)</li>
+                                                <li>직원정보, 급여를 수정할 수 있습니다.</li>
+                                                <li>퇴사 후 정보를 삭제할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01">도장관리</p>
+                                            <p class="txt02">문서에 사용할 도장을 생성합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_use_step03.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>개인(성명), 법인(회사명) 설정할 수 있습니다</li>
+                                                <li>성명(회사명) 기입 후 생성할 수 있습니다.</li>
+                                                <li>등록된 도장을 삭제할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01">결제수단</p>
+                                            <p class="txt02">결제 시 사용할 카드를 등록합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_use_step04.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>결제에 사용할 카드를 등록할 수 있습니다.</li>
+                                                <li>대표 결제 수단으로 지정/해제 할 수 있습니다.</li>
+                                                <li>결제정보를 받을 이메일을 등록합니다.</li>
+                                                <li>최근결제내역을 확인할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div id="tab2" class="tabcontent sign_guide">
+                            <div class="banner"> </div>
+                            <div class="tit_con">
+                                <p class="txt01">서명가이드</p>
+                                <p class="txt02">웹/모바일에서 편하게 서명을 할 수 있습니다.</p>
+                            </div>
+                            
+                            <div class="process">
+                                <ul class="list_box">
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01"><span>STEP 01</span>작성시작</p>
+                                            <p class="txt02">서명자, 비밀번호 등 기본정보를 작성합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_sign_guide01.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>서명완료 후 열람할 때 사용하는 번호입니다.(6~15자 이내)</li>
+                                                <li>서명자에게 연락방식과 문서에 서명하기 위한 비밀번호를 설정합니다.</li>
+                                                <li>예약전송으로 미리 작성 후 기간에 맞게 전송할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01"><span>STEP 02</span>문서항목</p>
+                                            <p class="txt02">필요한 항목을 작성합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_sign_guide02.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>작성하고 있는 문서의 종류를 확인할 수 있습니다.</li>
+                                                <li>문서 정보를 입력합니다. (계약기간, 근무장소, 내용 등)</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01"><span>STEP 03</span>문서확인</p>
+                                            <p class="txt02">작성자 서명확인 후 상대방에게 전송합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_sign_guide03.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>서명을 시작하면 선택한 연락처로 전송이 됩니다.(메일, 카카오톡)</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01"><span>STEP 04</span>상대방확인</p>
+                                            <p class="txt02">연락처로 받은 문서를 상대방이 서명/확인합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_sign_guide04.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>서명란을 클릭해서 도장을 만들 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01"><span>STEP 05</span>완료</p>
+                                            <p class="txt02">완료된 문서는 문서함에서 확인가능합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_sign_guide05.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>검색어, 기간, 진행상태로 검색할 수 있습니다.</li>
+                                                <li>간단한 계약서 정보와 서명시간을 확인할 수 있습니다.</li>
+                                                <li>서명하기, 서명취소, 진행완료를 알 수 있습니다. </li>
+                                                <li>내용, 서명진행을 확인할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="list">
+                                        <div class="txt_con">
+                                            <p class="txt01"><span>STEP 06</span>문서저장</p>
+                                            <p class="txt02">완료된 PDF문서를 저장/보관합니다.</p>
+                                        </div>
+                                        <div class="flex">
+                                            <div class="img_con">
+                                                <img src="./assets/images/img_sign_guide06.png" alt="">
+                                            </div>
+                                            <ul>
+                                                <li>완료된 문서는 PDF로 저장/보관 할 수 있습니다.</li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- content -->
+                </section>
+            </div>
+            <!-- footer -->
+            <footer class="main-footer"><strong>Copyright &copy; 2024 DeepBrain.</strong> All rights reserved.</footer>
+            <!-- footer -->
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.mySwiper', {
+                autoplay: {
+                    delay: 3000,
+                },
+                loop: true,
+                breakpoints: {
+                    300: {
+                        slidesPerView: 1, //브라우저가 768보다 클 때
+                        spaceBetween: 10,
+                    },
+                    480: {
+                        slidesPerView: 3, //브라우저가 1024보다 클 때
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 3, //브라우저가 1024보다 클 때
+                        spaceBetween: 20,
+                    },
+                },
+                cssMode: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            })
+
+            document.addEventListener("DOMContentLoaded", function() {
+            const tabLinks = document.querySelectorAll('.tablink');
+            const tabContents = document.querySelectorAll('.tabcontent');
+
+            tabLinks.forEach(function(tabLink) {
+                tabLink.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // 모든 탭 컨텐츠 숨기기
+                    tabContents.forEach(function(tabContent) {
+                        tabContent.style.display = 'none';
+                    });
+
+                    // 모든 탭 버튼의 'active' 클래스 제거
+                    tabLinks.forEach(function(tabLink) {
+                        tabLink.classList.remove('active');
+                    });
+
+                    // 선택된 탭 보이기
+                    document.getElementById(tabId).style.display = 'block';
+
+                    // 선택된 탭 버튼에 'active' 클래스 추가
+                    this.classList.add('active');
+                });
+            });
+
+            // 초기 화면 설정 (첫 번째 탭 보이기)
+            tabLinks[0].click();
+        });
+        </script>
+    </body>
+</html>

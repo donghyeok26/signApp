@@ -296,6 +296,52 @@ select {
     text-align: left;
 }
 
+/* 메인 / 프로모션 */
+
+.main .promotion {
+    margin-top: 20px;
+    padding: 35px 35px 50px;
+    box-sizing: border-box;
+    background-color: #014d69;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.main .promotion p {
+    margin: 0;
+}
+
+.main .promotion .txt_con {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.main .promotion .txt_con .txt01 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.main .promotion .txt_con .txt02 {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.main .promotion .btn02 {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main .promotion .btn02 a {
+    padding: 15px 50px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 20px;
+    color: #191919;
+}
+
 /* 서비스 안내 */
 
 .service {
@@ -617,6 +663,247 @@ select {
 
 .contract .advantage ul li i {
     padding-right: 5px;
+}
+
+/* 이용가이드 */
+
+.guide_step {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.guide_step p {
+    margin: 0;
+}
+
+.guide_step .banner {
+    position: relative;
+    width: 656px;
+    height: 263px;
+    padding: 90px 0;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background: url("../images/img_guide_banner.jpg") no-repeat center / cover;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+.guide_step .tabcontent {
+    display: none;
+}
+
+.guide_step .tabcontent .tit_con {
+    margin: 30px 0;
+}
+
+.guide_step .tabcontent .tit_con .txt01 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.guide_step .tabcontent .tit_con .txt02 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.guide_step .tabcontent .list_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.guide_step .tabcontent .list_box .list {
+    width: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: #f0f5fb;
+}
+
+.guide_step .tabcontent .list_box .list .txt_con {
+    margin-bottom: 40px;
+}
+
+.guide_step .tabcontent .list_box .list .txt_con .txt01 {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    border-bottom: 1px solid #000;
+}
+
+.guide_step .tabcontent .list_box .list .txt_con .txt02 {
+    font-size: 18px;
+}
+
+.guide_step .tabcontent .list_box .list .flex {
+    gap: 20px;
+}
+
+.guide_step .tabcontent .list_box .list .flex .img_con {
+    width: 50%;
+}
+
+.guide_step .tabcontent .list_box .list .flex .img_con img {
+    width: 100%;
+}
+
+.guide_step .tabcontent .list_box .list .flex ul {
+    width: 50%;
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    word-break: keep-all;
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li:nth-child(1):before {
+    content: "①";
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li:nth-child(2):before {
+    content: "②";
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li:nth-child(3):before {
+    content: "③";
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li:nth-child(4):before {
+    content: "④";
+}
+
+.guide_step .tabcontent .list_box .list .flex ul li span {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.guide_step .tablink {
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.guide_step .tablink.active {
+    font-weight: bold;
+}
+
+.guide_step .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 50px 0 30px;
+    border-bottom: 1px solid #0a336e;
+    overflow: hidden;
+}
+
+/* 테스트 */
+
+.test {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.test p {
+    margin: 0;
+}
+
+.test .section {
+    position: relative;
+    width: 100%;
+    height: 437px;
+}
+
+.test .section.first {
+    background: url("../images/guide01.jpg") no-repeat center / cover;
+}
+
+.test .section.second {
+    background: url("../images/guide02.jpg") no-repeat center / cover;
+}
+
+.test .section.third {
+    background: url("../images/guide03.jpg") no-repeat center / cover;
+}
+
+.test .section.fourth {
+    background: url("../images/guide04.jpg") no-repeat center / cover;
+}
+
+.test .section.fifth {
+    background: url("../images/guide05.jpg") no-repeat center / cover;
+}
+
+.test .section.sixth {
+    background: url("../images/guide06.jpg") no-repeat center / cover;
+}
+
+.test .section::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.test .section .txt_con {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 30px;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 2;
+}
+
+.test .section .txt_con .txt01 {
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    text-decoration: wavy;
+}
+
+.test .section .txt_con .txt01::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 200px;
+    height: 1px;
+    left: 0;
+    bottom: -10px;
+    background-color: #fff;
+}
+
+.test .section .txt_con .txt01 span {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.test .section .txt_con .txt02 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #9ec5fe;
+}
+
+.test .section .txt_con .txt03 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 /* 대쉬보드  / 계약 현황*/
@@ -2763,6 +3050,8 @@ a {
         width: 100%;
     }
 
+    /* 서명가이드 */
+
     /* 대시보드 / 계약 현황 */
     .dash .current .input_box,
     .dash .duration .calendar {
@@ -3122,7 +3411,7 @@ a {
     .shortcut .right a {
         flex-direction: column;
         gap: 0;
-        width: 199%;
+        width: 100%;
     }
 
     .shortcut .right a .img_con {
@@ -3239,6 +3528,69 @@ a {
         text-align: center;
     }
 
+    /* 이용가이드 */
+
+    .guide_step .banner {
+        padding: 90px 10px;
+    }
+
+    .guide_step .banner .txt_con .txt01 {
+        font-size: 1.2rem;
+        word-break: keep-all;
+    }
+
+    .guide_step .banner .txt_con .txt02 {
+        font-size: 1rem;
+        word-break: keep-all;
+    }
+
+    .guide_step .tabcontent ul li .txt_con .txt01 {
+        font-size: 1.2rem;
+    }
+
+    .guide_step .tabcontent ul li .txt_con .txt02 {
+        font-size: 0.9rem;
+        word-break: keep-all;
+    }
+
+    /* 서명가이드 */
+
+    .sign_guide .banner {
+        width: 100%;
+    }
+
+    .sign_guide .txt_con .txt01 {
+        font-size: 1.2rem;
+    }
+
+    .sign_guide .process ul li {
+        width: 100%;
+    }
+
+    .sign_guide .process ul li .txt02 {
+        font-size: 0.9rem;
+    }
+
+    /* test */
+
+    .test .section {
+        height: calc((100vh / 2) - 50px);
+    }
+
+    .test .section .txt_con .txt02,
+    .test .section .txt_con .txt03 {
+        font-size: 1rem;
+    }
+
+    .guide_step .tabcontent .list_box .list .flex {
+        flex-direction: column;
+    }
+
+    .guide_step .tabcontent .list_box .list .flex .img_con,
+    .guide_step .tabcontent .list_box .list .flex ul {
+        width: 100%;
+    }
+
     /* 대시보드 */
 
     .dash .card-body {
@@ -3247,6 +3599,19 @@ a {
 
     .dash .current .txt_box b {
         font-size: 1.2rem;
+    }
+
+    .sign_guide .txt_con .txt02 {
+        font-size: 1rem;
+        word-break: keep-all;
+    }
+
+    .sign_guide .process .txt {
+        font-size: 1.2rem;
+    }
+
+    .sign_guide .process ul li .txt01 {
+        font-size: 1rem;
     }
 
     /* 대시보드 / 계약 현황 */
@@ -3541,6 +3906,12 @@ a {
 }
 
 @media (max-width: 400px) {
+    /* 서명가이드 */
+
+    .sign_guide .banner {
+        height: 180px;
+    }
+
     .chatbot .wrapper .inner .left .content ul {
         max-width: 250px;
     }
@@ -3551,6 +3922,17 @@ a {
     }
 }
 @media (max-width: 380px) {
+    /* 메인 / 프로모션 */
+
+    .main .promotion .txt_con .txt01,
+    .main .promotion .txt_con .txt02 {
+        word-break: keep-all;
+    }
+
+    .main .promotion .btn02 a {
+        padding: 10px 30px;
+    }
+
     /* 서비스 안내 */
 
     .service .service_info .flex .txt_con ul li {
