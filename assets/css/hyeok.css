@@ -82,7 +82,7 @@ select {
     right: 0;
     top: -23px;
     width: 24px;
-    height: 23px;
+    height: 24px;
     background: url("../images/ico_border.png") no-repeat center / cover;
 }
 
@@ -91,20 +91,20 @@ select {
     position: absolute;
     display: block;
     left: -24px;
-    bottom: 0px;
+    bottom: -1px;
     width: 24px;
-    height: 23px;
+    height: 24px;
     background: url("../images/ico_border.png") no-repeat center / cover;
 }
 
 .con_layout .link:hover a span {
-    left: 55%;
+    right: -5px;
     transition: all 0.4s;
 }
 
 .con_layout .link a {
     display: block;
-    width: 110px;
+    width: 45px;
     height: 45px;
     background-color: #fff;
     border-radius: 20px 0 0 0;
@@ -115,15 +115,21 @@ select {
 
 .con_layout .link a span {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #191919;
+    right: 0;
+    bottom: 0;
+    color: #fff;
     transition: all 0.4s;
 }
 
 .con_layout .link a span i {
-    padding-left: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 /* 메인페이지 */
 
@@ -136,7 +142,7 @@ select {
 }
 
 .main .con_layout .disadvantage {
-    background-color: #0a336e;
+    background-color: #014d69;
     padding: 35px;
     box-sizing: border-box;
     border-radius: 20px;
@@ -160,6 +166,173 @@ select {
 }
 
 /* 바로가기 */
+
+.shortcut {
+    position: relative;
+}
+.shortcut .big {
+    margin-bottom: 20px;
+}
+.shortcut .big .box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #014d69;
+    /* box-shadow: 0 3px 7px rgba(0, 0, 0, 0.4); */
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.shortcut .box .link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.shortcut .box .link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -18px;
+    width: 19px;
+    height: 19px;
+    background: url(../images/ico_border.png) no-repeat center / cover;
+}
+
+.shortcut .box .link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    bottom: -1px;
+    width: 19px;
+    height: 19px;
+    background: url(../images/ico_border.png) no-repeat center / cover;
+}
+
+.shortcut .box .link a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.shortcut .box .link a span {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #191919;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.shortcut .box .link a span:hover {
+    right: -5px;
+    transition: all 0.4s;
+}
+
+.shortcut .box .link a span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shortcut .big .img_con img {
+    max-height: 110px;
+}
+
+.shortcut .txt_con .txt01 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.shortcut .txt_con .txt02 {
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+.shortcut .small {
+    display: flex;
+}
+
+.shortcut .small .img_con img {
+    max-height: 75px;
+}
+
+.shortcut .small .box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #014d69;
+    padding: 30px 20px 40px;
+    border-radius: 20px;
+}
+
+.shortcut .box {
+    width: 100%;
+}
+
+.shortcut .box.docu {
+    background-color: #2e558b;
+}
+
+.shortcut .box.employ {
+    background-color: #7b8ea9;
+}
+
+.shortcut .box.salary {
+    background-color: #304561;
+}
+
+.shortcut .box.stamp {
+    background-color: #242c36;
+}
+
+.shortcut .box.cash {
+    background-color: #2b2e33;
+}
+
+@media (min-width: 768px) {
+    .shortcut .big {
+        margin-bottom: 0;
+    }
+
+    .shortcut .big .txt_con .txt01 {
+        font-size: 1.2rem;
+    }
+
+    .shortcut .big .txt_con .txt02 {
+        font-size: 1rem;
+    }
+
+    .shortcut .small a {
+        align-items: center;
+        flex-direction: row;
+        text-align: left;
+        gap: 20px;
+    }
+    .shortcut-h-gap {
+        gap: 20px;
+    }
+}
 
 .shortcut {
     margin-top: 20px;
@@ -196,17 +369,10 @@ select {
 }
 
 .shortcut .txt_con {
+    width: 90%;
+    color: #fff;
 }
 
-.shortcut .txt_con .txt01 {
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.shortcut .txt_con .txt02 {
-    font-size: 16px;
-    font-weight: 400;
-}
 .shortcut .right {
     display: flex;
     flex-direction: column;
@@ -234,6 +400,112 @@ select {
 .shortcut .bottom {
 }
 
+/* 시작하기 */
+
+.start {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.start p {
+    margin: 0;
+}
+
+.start .start_step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 20px 50px;
+    border-radius: 20px;
+    background-color: #014d69;
+    text-align: center;
+    color: #fff;
+}
+
+.start .start_step .img_con {
+}
+
+.start .start_step .img_con img {
+}
+
+.start .start_step .txt_con {
+}
+
+.start .start_step .txt_con .txt01 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.start .start_step .txt_con .txt02 {
+    font-size: 18px;
+    font-weight: 400;
+    word-break: keep-all;
+}
+
+.start .start_step .link {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.start .start_step .link::before {
+    content: "";
+    position: absolute;
+    display: block;
+    right: 0;
+    top: -18px;
+    width: 19px;
+    height: 19px;
+    background: url(../images/ico_border.png) no-repeat center / cover;
+}
+
+.start .start_step .link::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -19px;
+    bottom: -1px;
+    width: 19px;
+    height: 19px;
+    background: url(../images/ico_border.png) no-repeat center / cover;
+}
+
+.start .start_step .link a {
+    display: block;
+    width: 45px;
+    height: 45px;
+    background-color: #fff;
+    border-radius: 20px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.start .start_step .link a span {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #191919;
+    right: 0;
+    bottom: 0;
+    color: #fff;
+    transition: all 0.4s;
+}
+
+.start .start_step .link a span:hover {
+    right: -5px;
+    transition: all 0.4s;
+}
+
+.start .start_step .link a span i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* 메인 / mockup */
 
 .main .mockup {
@@ -256,10 +528,7 @@ select {
     padding: 35px;
     box-sizing: border-box;
     border-radius: 20px;
-}
-
-.main .mockup.first > div a {
-    background-color: var(--yellow-color);
+    cursor: default;
 }
 
 .main .mockup > div a .img_con {
@@ -290,6 +559,7 @@ select {
     height: 350px;
     background: url("../images/img_main03.jpg") no-repeat center / cover;
     border-radius: 20px;
+    cursor: default !important;
 }
 
 .main .mockup.second > div a .txt_con {
@@ -3002,6 +3272,12 @@ a {
 }
 
 @media (max-width: 768px) {
+    /* 메인 */
+
+    .shortcut .big .box {
+        padding: 30px 0 50px;
+    }
+
     /* 서비스 안내 */
 
     .service .intro {
@@ -3390,7 +3666,7 @@ a {
     .shortcut .txt_con .txt02 {
         margin-top: 10px;
         font-size: 0.8rem;
-        line-height: 1.2;
+        line-height: 1.4;
     }
 
     .shortcut .txt_con .txt02 .next_line {
@@ -3955,6 +4231,12 @@ a {
 }
 
 @media (max-width: 330px) {
+    /* 메인 */
+
+    .shortcut .small .box {
+        padding: 30px 10px 55px;
+    }
+
     .service .intro .btn01 a {
         padding: 15px 70px;
     }
