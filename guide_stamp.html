@@ -174,69 +174,29 @@
             <script src="./assets/js/nav.js"></script>
             <!-- navbar -->
 
-            <div class="content-wrapper">
-                <section class="content contract">
+            <div class="content-wrapper container-fluid">
+                <section class="content start">
                     <!-- content -->
-                    <div class="container-fluid pt-2 pb-2">
-                        <!-- <div class="">
-                            <div class="banner">
-                                <div class="txt_con">
-                                    <p class="txt01">근로계약서를 작성해야하는 이유</p>
-                                    <p class="txt02">근로계약서는 선택이 아닌 필수입니다.</p>
-                                </div>
-                            </div>
-                        </div> -->
-
-                        <section class="title">
-                            <p class="txt01">근로계약서</p>
-                            <p class="txt02">근로계약서 작성 및 교부는 의무사항입니다.</p>
-                        </section>
-
-                        <div class="reason">
-                            <p class="sub_tit01">근로계약서 미 작성 이유</p>
+                     
+                    <section class="title stamp">
+                        <p class="txt01">도장 가이드</p>
+                    </section>
+                    <div class="swiper sub_guide">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
                             <div class="img_con">
-                                <img src="./assets/images/img_contract_reason.jpg" alt="">
+                                <img src="./assets/images/img_stamp_guide01.png" alt="">
                             </div>
-                        </div>
-
-                        <div class="disadvantage">
-                            <p class="sub_tit01">계약서 미작성 시 불이익</p>
-                            <div class="flex">
+                            <div class="txt_con">
+                                <p class="txt01">도장생성</p>
                                 <ul>
-                                    <li>
-                                        <p class="txt01">벌금 및 과태료</p>
-                                        <p class="txt02">최대 500만원 벌금 및 과태료 발생</p>
-                                    </li>
-                                    <li>
-                                        <p class="txt01">전과기록</p>
-                                        <p class="txt02">벌금은 형사처벌로 <span class="next_line">근로기준법 위반으로 전과가 남음</span></p>
-                                    </li>
-                                    <li>
-                                        <p class="txt01">법정분쟁</p>
-                                        <p class="txt02">고용주 / 근로자 사이 <span class="next_line">분쟁 발생 시 법적판단 기준</span></p>
-                                    </li>
-                                    <li>
-                                        <p class="txt01">비정규직</p>
-                                        <p class="txt02">시정기한 없이 적발 시 과태료 부과 <span class="next_line">정규직보다 더 엄격하게 규정</span></p>
-                                    </li>
+                                    <li class="txt02">개인(성명), 법인(회사명)으로 도장을 생성할 수 있습니다.</li>
                                 </ul>
                             </div>
+                          </div>
                         </div>
-
-                        <div class="advantage">
-                            <p class="sub_tit01" style="text-align: center;">
-                                "쓰자"를 이용하시면 이러한
-                                <span class="next_line">분쟁을 해결할 수 있습니다.</span>
-                            </p>
-                            <ul>
-                                <li><i class="fas fa-check"></i>모바일 지원</li>
-                                <li><i class="fas fa-check"></i>문서 자동 교부</li>
-                                <li><i class="fas fa-check"></i>간편한 UI</li>
-                                <li><i class="fas fa-check"></i>저렴한 가격</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
+                        <div class="swiper-pagination"></div>
+                      </div>
                     <!-- content -->
                 </section>
             </div>
@@ -244,5 +204,16 @@
             <footer class="main-footer"><strong>Copyright &copy; 2024 DeepBrain.</strong> All rights reserved.</footer>
             <!-- footer -->
         </div>
+        <!-- Swiper JS -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".sub_guide", {
+                loop:true,
+                spaceBetween:10,
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+            });
+          </script>
     </body>
 </html>
