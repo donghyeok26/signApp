@@ -175,52 +175,139 @@
             <!-- navbar -->
 
             <div class="content-wrapper">
-                <section class="content test">
+                <section class="content start">
                     <!-- content -->
-                    <div class="container-fluid pt-2 pb-2">
-                        <div class="section first">
-                            <div class="txt_con">
-                                <p class="txt01"><span>01.</span>작성시작</p>
-                                <p class="txt02">회원가입 및 직원관리에</p>
-                                <p class="txt03">작성된 내용으로 전자문서를 발송합니다.</p>
+                    <section class="title">
+                        <p class="txt01">쓰자 가이드</p>
+                    </section>
+                    <section class="acco_con">
+                        <button type="button" class="collapsible" onclick="collapse(this);">직원관리</button>
+                        <div class="layout">
+                            <div class="con_guide">
+                                <div class="img_con">
+                                    <img src="./assets/images/img_empoly_guide.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p class="txt01">1. 간편한 검색</p>
+                                    <ul>
+                                        <li class="txt02">이름(성명)으로 검색할 수 있습니다.</li>
+                                    </ul>
+                                    
+                                    <p class="txt01">2. 직원추가</p>
+                                    <ul>
+                                        <li class="txt02">
+                                            직원정보, 근무정보, 급여정보를 입력 후 직원등록이 가능합니다.
+                                        </li>
+                                        <li class="txt02">
+                                            월(20일), 4주, 1일 8시간 기준으로 보험계산이 자동으로 완료됩니다.
+                                        </li>
+                                    </ul>
+                                    <p class="txt01">3. 직원정보</p>
+                                    <ul>
+                                        <li class="txt02">
+                                            이름, 이메일, 전화번호를 확인할 수 있습니다.
+                                        </li>
+                                        <li class="txt02">
+                                            상세 개인정보를 확인 / 수정할 수 있습니다.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="section second">
-                            <div class="txt_con">
-                                <p class="txt01"><span>02.</span>문서항목</p>
-                                <p class="txt02">해당 직원에 알맞은 항목을 추가 후</p>
-                                <p class="txt03">작성된 내용으로 전자문서를 발송합니다.</p>
+                        <button type="button" class="collapsible" onclick="collapse(this);">급여관리</button>
+                        <div class="layout">
+                            <div class="con_guide">
+                                <div class="img_con">
+                                    <img src="./assets/images/img_salary_guide.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p class="txt01">1. 간편한 검색</p>
+                                    <ul class="count">
+                                        <li class="txt02">
+                                            이름(성함), 기간을 선택해서 검색할 수 있습니다.
+                                        </li>
+                                    </ul>
+                                    <p class="txt01">2. 급여명세서</p>
+                                    <ul class="count">
+                                        <li class="txt02">
+                                            등록되어 있는 직원정보로 급여명세서를 작성할 수 있습니다.
+                                        </li>
+                                        <li class="txt02">
+                                            직원 급여정보를 수정할 수 있습니다.
+                                        </li>
+                                    </ul>
+                                    <p class="txt01">3. 결제상세</p>
+                                    <ul class="count">
+                                        <li class="txt02">
+                                            결제내역 / 영수증을 확인할 수 있습니다.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="section third">
-                            <div class="txt_con">
-                                <p class="txt01"><span>03.</span>문서확인</p>
-                                <p class="txt02">작성자가 내용 기입/서명 후</p>
-                                <p class="txt03">상대방에게 전송합니다.</p>
+                        <button type="button" class="collapsible" onclick="collapse(this);">도장관리</button>
+                        <div class="layout">
+                            <div class="con_guide">
+                                <div class="img_con">
+                                    <img src="./assets/images/img_stamp_guide.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p class="txt01">1. 도장생성</p>
+                                    <ul>
+                                        <li class="txt02">개인(성명), 법인(회사명)으로 도장을 생성할 수 있습니다.</li>
+                                    </ul>
+                                    <p class="txt01">2. 도장관리</p>
+                                    <ul>
+                                        <li class="txt02">생성된 도장을 관리할 수 있습니다.</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="section fourth">
-                            <div class="txt_con">
-                                <p class="txt01"><span>04.</span>상대방확인</p>
-                                <p class="txt02">연락처 혹은 이메일로 받은 문서를 </p>
-                                <p class="txt03">상대방이 확인 후 서명합니다.</p>
+                        <button type="button" class="collapsible" onclick="collapse(this);">문서함</button>
+                        <div class="layout">
+                            <div class="con_guide">
+                                <div class="img_con">
+                                    <img src="./assets/images/img_docu_guide.png" alt="">
+                                </div>
+                                <div class="txt_con">
+                                    <p class="txt01">1. 간편한 검색</p>
+                                    <ul>
+                                        <li class="txt02">검색어, 기간, 진행상태로 문서를 검색할 수 있습니다.</li>
+                                    </ul>
+                                    <p class="txt01">2. 진행사항</p>
+                                    <ul class="count">
+                                        <li class="txt02">
+                                            열람비밀번호
+                                            <br>서명진행상태를 한눈에 확인할 수 있습니다.
+                                        </li>
+                                        <li class="txt02">
+                                            서명버튼
+                                            <br>자신의 차례에 활성화되는 버튼을 클릭하면 간편하게 서명할 수 있습니다.
+                                        </li>
+                                    </ul>
+                                    <p class="txt01">3. 문서기능</p>
+                                    <ul class="count">
+                                        <li class="txt02">
+                                            열람비밀번호
+                                            <br>서명완료 후 열람할 때 사용되는 비밀번호 수정
+                                        </li>
+                                        <li class="txt02">
+                                            내용확인
+                                            <br>서명요청, 서명만료일, 서명자 정보 등 확인할 수 있습니다.
+                                        </li>
+                                        <li class="txt02">
+                                            서명진행정보
+                                            <br>서명진행이력을 확인할 수 있습니다.
+                                        </li>
+                                        <li class="txt02">
+                                            문서확인
+                                            <br>실제 문서양식을 확인할 수 있습니다.
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="section fifth">
-                            <div class="txt_con">
-                                <p class="txt01"><span>05.</span>완료</p>
-                                <p class="txt02">상대방이 서명을 완료하면</p>
-                                <p class="txt03">완료된 문서는 문서함에서 확인할 수 있습니다.</p>
-                            </div>
-                        </div>
-                        <div class="section sixth">
-                            <div class="txt_con">
-                                <p class="txt01"><span>06.</span>문서저장</p>
-                                <p class="txt02">서명이 완료된 문서는</p>
-                                <p class="txt03">PDF문서로 저장됩니다.</p>
-                            </div>
-                        </div>
-                    </div>
+                    </section>
                     <!-- content -->
                 </section>
             </div>
@@ -260,7 +347,23 @@
                 pagination: {
                     el: '.swiper-pagination',
                 },
-            })
+            });
+
+            function collapse(element) {
+                var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
+                if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
+                    before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
+                    before.classList.remove("active");                  // 버튼 비활성화
+                }
+                element.classList.toggle("active");         // 활성화 여부 toggle
+
+                var content = element.nextElementSibling;
+                if (content.style.maxHeight != 0) {         // 버튼 다음 요소가 펼쳐져 있으면
+                    content.style.maxHeight = null;         // 접기
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
+                }
+            }
         </script>
     </body>
 </html>
