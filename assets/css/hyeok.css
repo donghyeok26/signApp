@@ -266,6 +266,244 @@ select {
     background-color: #2c2c2c;
 }
 
+/* 새로운 메인 */
+
+.new {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.new .sub_tit {
+    margin: 70px 0 35px;
+    text-align: center;
+}
+
+.new .sub_tit .txt01 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.new p {
+    margin: 0;
+}
+
+.new .homeguide {
+    display: flex;
+    gap: 20px;
+}
+
+.new .homeguide .guide_slide {
+    width: 40%;
+}
+
+.new .homeguide .guide_slide2 {
+    width: 55%;
+}
+
+.new .homeguide .guide_slide {
+    position: relative;
+}
+
+.new .homeguide .guide_slide .txt_box {
+    margin-bottom: 30px;
+}
+
+.new .homeguide .guide_slide .txt_box .txt01 {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: -0.25px;
+}
+
+.new .homeguide .guide_slide .txt_box .txt01 .next_line {
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+.new .homeguide .swiper-wrapper {
+    height: auto;
+}
+
+.new .homeguide .guide_slide .swiper-slide {
+    width: 25%;
+    height: 100%;
+    text-align: center;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.new .homeguide .guide_slide p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.new .homeguide .guide_slide .swiper-wrapper {
+}
+
+.new .homeguide .guide_slide .swiper-wrapper .swiper-slide {
+}
+
+.new .homeguide .guide_slide .swiper-wrapper .swiper-slide img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+}
+
+.new .homeguide .guide_slide .swiper-slide-thumb-active {
+    opacity: 1;
+}
+
+.new .homeguide .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.new .homeguide .guide_slide2 {
+    background-color: #191919;
+    padding: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.new .homeguide .guide_slide2 .swiper-wrapper {
+}
+
+.new .homeguide .guide_slide2 .swiper-slide {
+}
+
+.new .homeguide .guide_slide2 .swiper-slide img {
+    border-radius: 20px;
+}
+
+.new .homeguide .guide_slide .link {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 25px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background-color: var(--main-color);
+}
+
+.new .homeguide .guide_slide .link a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.new .homeguide .guide_slide .link a span {
+}
+
+.new .homeguide .guide_slide .link a i {
+    font-size: 18px;
+}
+
+/* 새로운 메인/쓰자 이럴 떄 이용해보세요 */
+
+.new .use_case {
+}
+
+.new .use_case ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.new .use_case ul li {
+    width: calc((100% - 20px) / 2);
+}
+
+.new .use_case ul li .img_con {
+}
+
+.new .use_case ul li .img_con img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.new .use_case ul li .txt_con {
+    margin-top: 15px;
+}
+
+.new .use_case ul li .txt_con .txt01 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.new .use_case ul li .txt_con .txt01 .num {
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.new .use_case ul li .txt_con .txt02 {
+    font-size: 16px;
+    font-weight: 400;
+    word-break: keep-all;
+    line-height: 1.2;
+    letter-spacing: -0.25px;
+}
+
+/* 새로운 메인 / 근로계약서를 작성해야하는 이유 */
+
+.new .banner {
+    margin-top: 70px;
+    padding: 65px 20px;
+    box-sizing: border-box;
+    background: url("../images/img_new_banner.png") no-repeat 95% center #466da7;
+}
+
+.new .banner .left {
+}
+
+.new .banner .left .txt_con {
+    margin-bottom: 25px;
+}
+
+.new .banner .left .txt_con .txt01 {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    line-height: 1.2;
+    letter-spacing: -0.25px;
+}
+
+.new .banner .left .txt_con .txt01 .pt {
+    color: #042c68;
+}
+
+.new .banner .left .link {
+    display: inline-block;
+    width: 200px;
+    padding: 10px 20px;
+    border-radius: 23px;
+    background-color: #fff;
+}
+
+.new .banner .left .link a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #466da7;
+    text-decoration: none;
+}
+
+.new .banner .left .link a span {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.new .banner .left .link a i {
+}
+
 /* 가이드 / 아코디언 */
 
 .acco_con .collapsible {
@@ -3510,6 +3748,25 @@ select {
 }
 
 @media screen and (max-width: 680px) {
+    /* 새로운메인 */
+
+    .new .homeguide {
+        flex-direction: column-reverse;
+    }
+
+    .new .homeguide .guide_slide2,
+    .new .homeguide .guide_slide {
+        width: 70%;
+    }
+
+    .new .homeguide .guide_slide .link {
+        position: relative;
+        width: 220px;
+        margin-top: 20px;
+    }
+
+    /* faq */
+
     .faq .tabs {
         display: none;
     }
@@ -4048,6 +4305,25 @@ select {
 }
 
 @media (max-width: 480px) {
+    /* 새로운메인 */
+
+    .new .homeguide .guide_slide2,
+    .new .homeguide .guide_slide {
+        width: 90%;
+    }
+
+    .new .use_case ul {
+        flex-wrap: wrap;
+    }
+
+    .new .use_case ul li {
+        width: 100%;
+    }
+
+    .new .banner {
+        background: url("../images/img_new_banner.png") no-repeat 100% 130% #466da7;
+    }
+
     /* 메인 / 슬라이드 */
 
     .main .main_banner .page_num {
