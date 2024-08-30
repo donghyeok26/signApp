@@ -181,30 +181,15 @@
                     
                     <div class="homeguide">
                         
-                        <div thumbsSlider="" class="swiper guide_slide">
+                        <div thumbsSlider="" class="guide_slide">
                             <div class="txt_box">
                                 <p class="txt01">
-                                    쉽고, 편리한
-                                    <span class="next_line">전자서명작성 끝 - 쓰자</span>
+                                    쉽고, 간편한
+                                    <span class="next_line">전자서류작성</span>
                                 </p>
-                            </div>
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/ico_homeguide01.png" alt="">
-                                    <p>문서선택</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/ico_homeguide02.png" alt="">
-                                    <p>자동작성</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/ico_homeguide03.png" alt="">
-                                    <p>전자서명</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/ico_homeguide04.png" alt="">
-                                    <p>문서관리</p>
-                                </div>
+                                <p class="txt02">
+                                    언제 어디서든 모바일로 편하게 사용해보세요!
+                                </p>
                             </div>
                             <div class="link">
                                 <a href="javascript:void(0)">
@@ -214,21 +199,97 @@
                             </div>
                         </div>
                         <div class="swiper guide_slide2">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/gif_homeguide01.gif" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/gif_homeguide02.gif" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/gif_homeguide03.gif" alt="">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="./assets/images/gif_homeguide04.gif" alt="">
-                                </div>
+                            <div class="swiper-slide">
+                                <img src="./assets/images/gif_homeguide01.gif" alt="">
                             </div>
                         </div>
+                    </div>
+
+                    <!-- 가이드 -->
+
+                    <div class="main_guide">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_file.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">문서함</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_person.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">직원관리</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_salary.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">급여관리</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_stamp.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">도장</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_fulltime.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">표준근로계약서</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_daylaborer.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">일용직</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_parttime.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">단기간</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <div class="img_con">
+                                        <img src="./assets/images/img_paystub.png" alt="">
+                                    </div>
+                                    <div class="txt_con">
+                                        <p class="txt01">급여명세서</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
                     <!-- 쓰자 이럴 떄 이용해보세요 -->
@@ -313,29 +374,6 @@
             <!-- footer -->
         </div>
         <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-        <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper(".guide_slide", {
-            loop: true,
-            spaceBetween: 10,
-            slidesPerView: 4,
-            freeMode: true,
-            watchSlidesProgress: true,
-            });
-            var swiper2 = new Swiper(".guide_slide2", {
-                effect : 'fade', // 페이드 효과 사용
-            loop: true,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            thumbs: {
-                swiper: swiper,
-            },
-            });
-        </script>
     </body>
 </html>

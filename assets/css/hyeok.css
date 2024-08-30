@@ -289,15 +289,16 @@ select {
 
 .new .homeguide {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 .new .homeguide .guide_slide {
-    width: 40%;
+    width: 50%;
 }
 
 .new .homeguide .guide_slide2 {
-    width: 55%;
+    width: 50%;
 }
 
 .new .homeguide .guide_slide {
@@ -309,8 +310,9 @@ select {
 }
 
 .new .homeguide .guide_slide .txt_box .txt01 {
-    font-size: 24px;
-    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.25px;
 }
@@ -320,34 +322,11 @@ select {
     color: var(--main-color);
 }
 
-.new .homeguide .swiper-wrapper {
-    height: auto;
-}
-
-.new .homeguide .guide_slide .swiper-slide {
-    width: 25%;
-    height: 100%;
-    text-align: center;
-    opacity: 0.4;
-    cursor: pointer;
-}
-
-.new .homeguide .guide_slide p {
-    font-size: 14px;
-    font-weight: 400;
-}
-
-.new .homeguide .guide_slide .swiper-wrapper {
-}
-
-.new .homeguide .guide_slide .swiper-wrapper .swiper-slide {
-}
-
-.new .homeguide .guide_slide .swiper-wrapper .swiper-slide img {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 40px;
+.new .homeguide .guide_slide .txt_box .txt02 {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.25px;
+    word-break: keep-all;
 }
 
 .new .homeguide .guide_slide .swiper-slide-thumb-active {
@@ -359,6 +338,7 @@ select {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .new .homeguide .guide_slide2 {
@@ -368,20 +348,8 @@ select {
     overflow: hidden;
 }
 
-.new .homeguide .guide_slide2 .swiper-wrapper {
-}
-
-.new .homeguide .guide_slide2 .swiper-slide {
-}
-
-.new .homeguide .guide_slide2 .swiper-slide img {
-    border-radius: 20px;
-}
-
 .new .homeguide .guide_slide .link {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: 45px;
     padding: 10px 25px;
     box-sizing: border-box;
     border-radius: 25px;
@@ -403,6 +371,59 @@ select {
 
 .new .homeguide .guide_slide .link a i {
     font-size: 18px;
+}
+
+/* 새로운 메인 / 가이드 */
+
+.main_guide {
+    margin-top: 70px;
+}
+
+.main_guide ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main_guide ul li {
+    width: calc((100% - 45px) / 4);
+}
+
+.main_guide ul li a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
+
+.main_guide ul li a .img_con {
+    position: relative;
+    width: 100%;
+    border-radius: 50%;
+    background-color: #f0f4f9;
+}
+
+.main_guide ul li a .img_con::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.main_guide ul li a .img_con img {
+    position: absolute;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main_guide ul li a .txt_con {
+    margin-top: 10px;
+}
+
+.main_guide ul li a .txt_con .txt01 {
+    font-weight: 700;
+    word-break: keep-all;
 }
 
 /* 새로운 메인/쓰자 이럴 떄 이용해보세요 */
@@ -455,13 +476,29 @@ select {
 /* 새로운 메인 / 근로계약서를 작성해야하는 이유 */
 
 .new .banner {
+    position: relative;
     margin-top: 70px;
     padding: 65px 20px;
     box-sizing: border-box;
-    background: url("../images/img_new_banner.png") no-repeat 95% center #466da7;
+    background-color: #466da7;
+}
+
+.new .banner::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 275px;
+    height: 206px;
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    background: url("../images/img_new_banner.png") no-repeat;
+    z-index: 1;
 }
 
 .new .banner .left {
+    position: relative;
+    z-index: 2;
 }
 
 .new .banner .left .txt_con {
@@ -504,6 +541,52 @@ select {
 .new .banner .left .link a i {
 }
 
+/* 영상 가이드 */
+
+.guide_video {
+}
+
+.guide_video p {
+    margin: 0;
+}
+
+.guide_video .video_banner {
+    margin-top: 45px;
+    padding: 20px 40px;
+    background-color: #f0f4f9;
+}
+
+.guide_video .video_banner .txt_box {
+    margin-bottom: 10px;
+}
+
+.guide_video .video_banner .txt_box .txt01 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.guide_video .video_banner .txt_box .txt02 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.guide_video .video_banner .video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 0 auto;
+}
+
+.guide_video .video_banner .video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
 /* 가이드 / 아코디언 */
 
 .acco_con .collapsible {
@@ -596,8 +679,9 @@ select {
 
 .acco_con .layout .con_guide .txt_con .link {
     position: relative;
+    padding: 0 20px;
     background-color: #014d69;
-    text-align: center;
+    text-align: left;
 }
 
 .acco_con .layout .con_guide .txt_con .link a {
@@ -1456,12 +1540,12 @@ select {
 }
 
 .contract .advantage .sub_tit01 {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .contract .advantage ul {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     gap: 25px;
 }
 
@@ -1472,6 +1556,32 @@ select {
 
 .contract .advantage ul li i {
     padding-right: 5px;
+}
+
+.contract .advantage .link {
+    position: relative;
+    width: 220px;
+    margin-top: 30px;
+    background-color: #fff;
+    border-radius: 22px;
+    z-index: 2;
+}
+
+.contract .advantage .link a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #014d69;
+    text-decoration: none;
+}
+
+.contract .advantage .link span {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.contract .advantage .link i {
 }
 
 /* 이용가이드 */
@@ -4314,14 +4424,55 @@ select {
 
     .new .use_case ul {
         flex-wrap: wrap;
+        gap: 10px;
     }
 
     .new .use_case ul li {
-        width: 100%;
+        width: calc((100% - 10px) / 2);
+        padding-bottom: 10px;
+        box-shadow: 0 5px 10px #eee;
+        border: 1px solid #eee;
+        border-radius: 10px;
+    }
+
+    .new .use_case ul li .txt_con {
+        padding: 0 5px;
+    }
+
+    .new .use_case ul li .txt_con .txt01 {
+        font-size: 1rem;
+    }
+
+    .new .use_case ul li .txt_con .txt01 .num {
+        padding-right: 5px;
+        font-size: 1.2rem;
+    }
+
+    .new .use_case ul li .txt_con .txt02 {
+        font-size: 0.8rem;
     }
 
     .new .banner {
-        background: url("../images/img_new_banner.png") no-repeat 100% 130% #466da7;
+        background: #466da7;
+        text-align: center;
+    }
+
+    .new .banner::after {
+        opacity: 0.4;
+    }
+
+    /* 가이드 */
+
+    .new .homeguide .guide_slide .txt_box .txt01 {
+        font-size: 1.5rem;
+    }
+
+    .new .homeguide .guide_slide .txt_box .txt02 {
+        font-size: 1.2rem;
+    }
+
+    .main_guide ul li a .txt_con .txt01 {
+        font-size: 0.9rem;
     }
 
     /* 메인 / 슬라이드 */
@@ -4474,11 +4625,12 @@ select {
 
     .contract .advantage ul {
         flex-wrap: wrap;
+        gap: 5px;
     }
 
     .contract .advantage ul li {
         width: calc((100% / 2) - 20px);
-        text-align: center;
+        text-align: left;
     }
 
     /* 이용가이드 */
